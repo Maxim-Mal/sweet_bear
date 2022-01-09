@@ -1,2 +1,3 @@
 # sweet_bear
-Bakery blog for Misia
+
+Bakery blog for Misi

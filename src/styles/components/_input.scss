@@ -1,0 +1,50 @@
+@import "./variables";
+
+.input-field {
+  display: flex;
+  align-items: center;
+
+  &_input {
+    height: 45px;
+    width: 250px;
+    color: $btn-text-color;
+    font-size: 18px;
+    padding-left: 50px;
+    border: none;
+    border-radius: 14px;
+    background: $btn-color;
+    box-shadow: $shadow-intset;
+    &:focus {
+      outline: none;
+      box-shadow: $shadow-outset;
+      //spytac dlaczego musze uzcy w tym przypadku parent i cildren
+      + .input-field_icon .input-field_icon--path {
+        stroke: $color-inside-component;
+      }
+      + .input-field_icon--letter {
+        fill: $color-inside-component;
+      }
+    }
+    &::placeholder {
+      color: #9699a1;
+      font-size: 18px;
+      font-family: inherit;
+    }
+    &--subscribe {
+      width: 400px;
+    }
+  }
+  &_icon {
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    padding-left: 16px;
+    &--letter {
+      padding-right: 580px;
+      fill: $btn-text-color;
+    }
+    &--path {
+      stroke: #c4c8d1;
+    }
+  }
+}
