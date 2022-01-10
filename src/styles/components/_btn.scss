@@ -1,94 +1,94 @@
-// square button
-@import "variables";
+@import "./variables";
 
-.btn-sqr {
+.btn {
   @include FlexCenter;
-  height: 55px;
-  width: 55px;
   border-radius: 14px;
   color: $btn-text-color;
   font-family: ROBOTO;
   font-size: 18px;
   background: $btn-color;
   box-shadow: $shadow-outset;
+  text-decoration: none;
 
-  &_icon {
+  &:active {
+    box-shadow: $shadow-intset;
+  }
+
+  &:hover {
+    fill: $color-inside-component;
+    color: $color-inside-component;
+  }
+
+  &:hover &--icon {
+    fill: $color-inside-component;
+  }
+
+  &--icon {
     height: 20px;
     width: 24px;
     fill: #575f6b;
     transition: all 0.3s ease;
   }
-  &:active {
-    box-shadow: $shadow-intset;
-  }
-  &:hover .btn-sqr_icon {
-    fill: $color-inside-component;
-    color: $color-inside-component;
-  }
-  &--lang {
-    text-decoration: none;
-    transition: all 0.3s ease;
 
-    &:hover {
-      color: $color-inside-component;
-    }
+  &--sqr {
+    height: 55px;
+    width: 55px;
+  }
+
+  &--link {
+    height: 41px;
+    width: 155px;
+    transition: all 0.3s ease;
+  }
+  &--round {
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+  }
+
+  &--lang {
+    transition: all 0.3s ease;
   }
 }
 
 //rect. button
 
-.btn-link {
-  @include FlexCenter;
-  height: 41px;
-  width: 155px;
-  color: $btn-text-color;
-  text-decoration: none;
-  font-family: ROBOTO;
-  font-size: 18px;
-  border-radius: 14px;
-  background: $btn-color;
-  box-shadow: $shadow-outset;
-  transition: all 0.3s ease;
+// .btn-link {
+//   @include FlexCenter;
+//   height: 41px;
+//   width: 155px;
+//   color: $btn-text-color;
+//   text-decoration: none;
+//   font-family: ROBOTO;
+//   font-size: 18px;
+//   border-radius: 14px;
+//   background: $btn-color;
+//   box-shadow: $shadow-outset;
+//   transition: all 0.3s ease;
 
-  &:active {
-    box-shadow: $shadow-intset;
-  }
-  &:hover {
-    color: $color-inside-component;
-  }
-  &:hover .btn-link_icon-arrow {
-    fill: $color-inside-component;
-    transform: translate(5px);
-  }
-  &--sign-in {
-    display: flex;
-    justify-content: center;
-  }
-  &_icon-arrow {
-    width: 14px;
-    height: 14px;
-    margin-left: 10px;
-    fill: #575f6b;
-    transition: all 0.3s ease;
-  }
-  &--subscribe {
-    margin-left: 20px;
-  }
-}
+//   &:active {
+//     box-shadow: $shadow-intset;
+//   }
+//   &:hover {
+//     color: $color-inside-component;
+//   }
+//   &:hover .btn-link_icon-arrow {
+//     fill: $color-inside-component;
+//     transform: translate(5px);
+//   }
+//   &--sign-in {
+//     display: flex;
+//     justify-content: center;
+//   }
+//   &_icon-arrow {
+//     width: 14px;
+//     height: 14px;
+//     margin-left: 10px;
+//     fill: #575f6b;
+//     transition: all 0.3s ease;
+//   }
+//   &--subscribe {
+//     margin-left: 20px;
+//   }
+// }
 // round btns
-.btn-round {
-  @include FlexCenter;
-  height: 55px;
-  width: 55px;
-  border-radius: 50%;
-  background: $btn-color;
-  box-shadow: $shadow-outset;
-  margin-left: 50px;
-  &_icon {
-    height: 20px;
-    width: 24px;
-  }
-  &:active {
-    box-shadow: $shadow-intset;
-  }
-}
