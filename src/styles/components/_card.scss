@@ -1,0 +1,19 @@
+.card {
+  width: 300px;
+  height: 250px;
+  border-radius: 14px;
+  background: $btn-color;
+  box-shadow: $shadow-outset;
+
+  &__title {
+    font-family: Roboto, Arial, sans-serif;
+
+    &--primary {
+      color: black;
+    }
+
+    &--secondary {
+      color: gray;
+    }
+  }
+}
