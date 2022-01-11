@@ -23,6 +23,10 @@
     fill: $color-inside-component;
   }
 
+  &:hover &--icon-arrow{
+    transform: translate(15px);
+  }
+
   &--icon {
     height: 20px;
     width: 24px;
@@ -48,6 +52,12 @@
 
   &--lang {
     transition: all 0.3s ease;
+  }
+
+  &--icon-arrow{
+    height: 14px;
+    width: 14px;
+    padding: 5px;
   }
 }
 
