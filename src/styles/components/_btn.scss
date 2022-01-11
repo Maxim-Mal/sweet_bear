@@ -23,7 +23,7 @@
     fill: $color-inside-component;
   }
 
-  &:hover &--icon-arrow{
+  &:hover &--icon-arrow {
     transform: translate(15px);
   }
 
@@ -53,8 +53,11 @@
   &--lang {
     transition: all 0.3s ease;
   }
+  &--subscribe {
+    margin-left: 20px;
+  }
 
-  &--icon-arrow{
+  &--icon-arrow {
     height: 14px;
     width: 14px;
     padding: 5px;
