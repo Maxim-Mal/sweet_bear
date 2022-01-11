@@ -23,7 +23,7 @@
     fill: $color-inside-component;
   }
 
-  &:hover &--icon-arrow{
+  &:hover &--icon-arrow {
     transform: translate(15px);
   }
 
@@ -53,52 +53,13 @@
   &--lang {
     transition: all 0.3s ease;
   }
+  &--subscribe {
+    margin-left: 20px;
+  }
 
-  &--icon-arrow{
+  &--icon-arrow {
     height: 14px;
     width: 14px;
     padding: 5px;
   }
 }
-
-//rect. button
-
-// .btn-link {
-//   @include FlexCenter;
-//   height: 41px;
-//   width: 155px;
-//   color: $btn-text-color;
-//   text-decoration: none;
-//   font-family: ROBOTO;
-//   font-size: 18px;
-//   border-radius: 14px;
-//   background: $btn-color;
-//   box-shadow: $shadow-outset;
-//   transition: all 0.3s ease;
-
-//   &:active {
-//     box-shadow: $shadow-intset;
-//   }
-//   &:hover {
-//     color: $color-inside-component;
-//   }
-//   &:hover .btn-link_icon-arrow {
-//     fill: $color-inside-component;
-//     transform: translate(5px);
-//   }
-//   &--sign-in {
-//     display: flex;
-//     justify-content: center;
-//   }
-//   &_icon-arrow {
-//     width: 14px;
-//     height: 14px;
-//     margin-left: 10px;
-//     fill: #575f6b;
-//     transition: all 0.3s ease;
-//   }
-//   &--subscribe {
-//     margin-left: 20px;
-//   }
-// }
-// round btns
