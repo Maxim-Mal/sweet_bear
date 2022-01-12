@@ -4,9 +4,21 @@
   border-radius: 14px;
   background: $btn-color;
   box-shadow: $shadow-outset;
+  position: relative;
+
+  &__bookmark {
+    position: absolute;
+    margin: 11px 0 0 254px;
+  }
 
   &__image {
     max-width: 100%;
+    position: absolute;
+  }
+  &__description {
+    position: absolute;
+    top: 145px;
+    right: 140px;
   }
 
   &__title {
@@ -14,10 +26,30 @@
 
     &--primary {
       color: black;
+      margin: 0;
     }
 
     &--secondary {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
       color: gray;
     }
+  }
+  &__icon {
+    display: inline-block;
+    top: 10px;
+    right: 15px;
+    height: 20px;
+    margin: 0;
+  }
+
+  &__btn {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+  }
+  &--star {
+    fill: $btn-text-color;
   }
 }
