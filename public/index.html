@@ -173,10 +173,12 @@
         <h2 class="section-titles">Latest Recipes</h2>
         <div class="group-card">
           <div class="card">
-            <img
-              class="card__image"
-              src="./assets/Images/mike-meeks-zk-fclJdGas-unsplash 1.png"
-            />
+            <a href="#"
+              ><img
+                class="card__image"
+                src="./assets/Images/mike-meeks-zk-fclJdGas-unsplash 1.png"
+            /></a>
+
             <div class="card__bookmark">
               <svg
                 width="37"
@@ -242,9 +244,7 @@
               </svg>
             </div>
             <div class="card__description">
-              <h3 class="card__title card__title--primary">
-                Title of the recipe
-              </h3>
+              <h3 class="card__title card__title--primary">Babka z kremem</h3>
               <div class="test card__icon">
                 <svg
                   class="card__icon"
@@ -261,9 +261,7 @@
                 </svg>
               </div>
 
-              <h4 class="test card__title card__title--secondary">
-                Type of bakery
-              </h4>
+              <h4 class="test card__title card__title--secondary">Mafinki</h4>
 
               <div class="card__ranking">
                 <svg
@@ -370,6 +368,7 @@
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
+                    class="card__star--path"
                     d="m9.13.416 3.024 5.09 6.007 1.182-4.137 4.326.688 5.822-5.582-2.423-5.583 2.423.686-5.822L.098 6.688l6.005-1.182L9.13.416Z"
                   />
                   <defs>
@@ -387,12 +386,29 @@
                   </defs>
                 </svg>
               </div>
+              <!-- Is it a good practice to left wraped link in div wthout class? -->
             </div>
-            <div class="card__btn btn btn--round"></div>
+            <button class="card__btn btn btn--link">Ingridients</button>
+            <div class="card__back-side show">
+              <ol class="list list__ingridients">
+                <li>loremdfdfsfsdfdf - 100 g</li>
+                <li>losgfsfgrem - 10g</li>
+                <li>loresdfdsm - 1kg</li>
+                <li>lorfdsfdsfem</li>
+                <li>lorem - 1l</li>
+                <li>lorssdfsdfem</li>
+                <li>losdrsdfdsem</li>
+                <li>lorem</li>
+                <li>lorsdfem - 13g</li>
+                <li>lorsdfem</li>
+              </ol>
+            </div>
           </div>
         </div>
       </section>
     </main>
   </body>
+
   <script src="./main.js"></script>
+  <script src="./card.js"></script>
 </html>
