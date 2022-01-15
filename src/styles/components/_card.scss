@@ -1,4 +1,5 @@
 .section-titles {
+  //@font-face
   padding: 30px;
   @include FlexCenter;
   font-size: 50px;
@@ -8,6 +9,10 @@
 }
 
 .card {
+  //read about fuctionality
+  overflow: hidden;
+
+  display: flex;
   width: 400px;
   height: 350px;
   border-radius: 14px;
@@ -29,9 +34,11 @@
   }
 
   &__image {
+    //aspect-ratio use this one here
+    //anker display block
     overflow: hidden;
     max-width: 100%;
-    max-height: 100%;
+    max-height: 200px;
     position: absolute;
     transition: all 0.5s ease-in-out;
 
@@ -114,10 +121,6 @@
     }
   }
   &__back-side {
-    // how to fix issue with overflow corners, "hidden" doesn't work in this case
-    overflow: hidden;
-    object-fit: cover;
-    //
     display: flex;
     width: 400px;
     height: 206px;
@@ -136,8 +139,6 @@
       opacity: 1;
       pointer-events: 1;
       transform: rotateX(-180deg);
-      // -webkit-backface-visibility: hidden;
-      // backface-visibility: hidden;
     }
   }
   .list__ingridients {
