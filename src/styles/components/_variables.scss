@@ -4,9 +4,11 @@ $shadow-outset: 6px 6px 11px #bebebe, -6px -6px 11px #ffffff;
 $shadow-intset: inset 6px 6px 11px #bebebe, inset -6px -6px 11px #ffffff;
 
 //Colors
-$btn-color: #e0e0e0;
-$btn-text-color: #575f6b;
-$color-inside-component: #6d5dfc;
+$light-gray: #e0e0e0;
+$light-gray--secondary: #c4c8d1;
+
+$gray: #575f6b;
+$purple: #6d5dfc;
 
 //Positioning
 @mixin FlexCenter {
