@@ -3,10 +3,14 @@
 @import "./logo";
 
 body {
-  background-color: #e0e0e0;
+  background-color: $light-gray;
   margin: 30px;
 }
 .subscribe {
   @include FlexCenter;
   margin-top: 50px;
+
+  &__btn {
+    margin-left: 20px;
+  }
 }
