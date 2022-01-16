@@ -1,17 +1,43 @@
+//------Why @font-face do not work with local files? Only with html link and import file in main css
+
+// @font-face {
+//   font-family: "Baginda Script";
+//   src: url("../../../fonts/BagindaScript.woff") format("woff");
+// }
+
+@font-face {
+  font-family: "Baginda Script";
+  src: url("//db.onlinewebfonts.com/t/e51dd697f37e546d5076fd21719136b4.eot");
+  src: url("//db.onlinewebfonts.com/t/e51dd697f37e546d5076fd21719136b4.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/e51dd697f37e546d5076fd21719136b4.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/e51dd697f37e546d5076fd21719136b4.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/e51dd697f37e546d5076fd21719136b4.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/e51dd697f37e546d5076fd21719136b4.svg#Baginda Script")
+      format("svg");
+}
 .section-titles {
-  //@font-face
-  padding: 30px;
   @include FlexCenter;
   font-size: 50px;
-  font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-    sans-serif;
-  font-style: italic;
+  //how to check computed font in devtools? In computed tab I see all fonts.
+  font-family: Faustina, Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+
+  &--hand-written {
+    padding-left: 10px;
+    font-family: "Baginda Script";
+    font-size: 62px;
+    font-style: normal;
+    font-weight: 100;
+  }
 }
 
 .card {
-  //read about fuctionality
+  //read about fuctionality of overflow function
   overflow: hidden;
-
   display: flex;
   width: 400px;
   height: 350px;
@@ -34,11 +60,9 @@
   }
 
   &__image {
-    //aspect-ratio use this one here
-    //anker display block
-    overflow: hidden;
-    max-width: 100%;
-    max-height: 200px;
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
     position: absolute;
     transition: all 0.5s ease-in-out;
 
@@ -108,7 +132,7 @@
   }
 
   &__ranking {
-    margin-top: 22px;
+    margin-top: 14px;
   }
   &--star {
     fill: $btn-text-color;
