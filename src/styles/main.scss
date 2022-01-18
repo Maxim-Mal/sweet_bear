@@ -28,3 +28,15 @@ body {
   align-content: center;
   column-gap: 70px;
 }
+
+.group-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 800px;
+  align-content: center;
+  align-content: center;
+  column-gap: 70px;
+}
