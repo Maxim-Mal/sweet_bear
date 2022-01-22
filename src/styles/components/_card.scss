@@ -34,22 +34,53 @@
   }
 }
 
+.group-card {
+  padding: 0 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  // grid-auto-columns: auto;
+  /* grid-auto-rows: minmax(300px, 385px); */
+  gap: 40px;
+
+  @include respond-to(medium) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include respond-to(small) {
+    grid-template-columns: 1fr;
+  }
+}
+
 .card {
   //read about fuctionality of overflow function
   overflow: hidden;
-  display: flex;
-  width: 400px;
-  height: 350px;
+  width: clamp(200px, 30vw, 400px);
+  align-items: stretch;
   border-radius: 14px;
   background: $light-gray;
   box-shadow: $shadow-outset;
   position: relative;
+
+  @include respond(tab-port) {
+    grid-template-columns: 1fr 1fr;
+    width: clamp(200px, 100%, 300px);
+  }
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+    width: clamp(200px, 80vw, 400px);
+  }
+  &__anker--image {
+    display: block;
+  }
 
   &__bookmark {
     position: absolute;
     top: 12px;
     right: 20px;
     transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    &--icon-clicked {
+      fill: rgba(82, 179, 33, 0.8);
+    }
 
     &--toggle {
       transition: all 0.5s ease-in-out;
@@ -62,8 +93,7 @@
     aspect-ratio: 2/1;
     object-fit: cover;
     width: 100%;
-    // height: 200px;
-    position: absolute;
+    height: 200px;
     transition: all 0.5s ease-in-out;
 
     &--show {
@@ -73,23 +103,17 @@
       pointer-events: none;
     }
   }
-  // &__description {
-  //   position: absolute;
-  //   top: 225px;
-  //   right: 200px;
-  //   margin-left: 15px;
-  // }
 
   &__title {
     font-family: Roboto, Arial, sans-serif;
     text-decoration: none;
 
     &--primary {
-      position: absolute;
-      bottom: 109px;
-      left: 10px;
+      padding-top: 17px;
+      padding-left: 15px;
+      display: block;
       font-size: 24px;
-      margin: 0;
+      margin-right: auto;
       font-weight: 10;
       color: #000;
       transition: all 0.3s ease-in-out;
@@ -101,14 +125,9 @@
     }
 
     &--secondary {
-      display: inline-block;
-      position: absolute;
-      bottom: 71px;
-      left: 50px;
       font-size: 22px;
       font-weight: 10;
-      margin: 5px 0 0 0;
-      padding: 0;
+
       color: #575f6b;
       transition: all 0.3s ease-in-out;
       &:hover {
@@ -118,29 +137,37 @@
     }
   }
   &__icon {
-    display: inline-block;
-    position: absolute;
-    bottom: 36px;
-    left: 8px;
+    margin-left: 15px;
   }
+  &__ranking-and-button {
+    padding-left: 15px;
 
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    @include respond-to(small) {
+      gap: 10px;
+    }
+  }
   &__btn {
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-    padding: 2px 20px 2px 22px;
+    margin-right: 15px;
+    padding: 2px 16px;
     text-transform: uppercase;
     font-size: 15px;
     width: fit-content;
     border: none;
     cursor: pointer;
+    margin-bottom: 15px;
   }
 
   &__ranking {
-    display: inline-block;
-    position: absolute;
-    bottom: 35px;
-    left: 18px;
+    margin-right: auto;
+    @include respond-to(small) {
+      margin-top: 6px;
+    }
   }
   &--star {
     fill: $gray;
@@ -157,6 +184,8 @@
     width: 400px;
     height: 206px;
     position: absolute;
+    top: 0;
+    right: 0;
     background-color: $light-gray;
     border-color: #000;
     width: 400px;
@@ -183,5 +212,32 @@
     flex-wrap: wrap;
     align-content: center;
     align-items: flex-start;
+  }
+  &__ranking {
+    transform: rotateY(-180deg);
+  }
+  &__ranking label::before {
+    content: "\2605";
+    font-size: 20px;
+    display: inline-block;
+  }
+  &__ranking input {
+    display: none;
+  }
+  &__ranking label {
+    color: #90a0a3;
+    cursor: pointer;
+  }
+  &__ranking > input:checked ~ label,
+  &__ranking:not(:checked) > label:hover,
+  &__ranking:not(:checked) > label:hover ~ label {
+    color: #f79426;
+  }
+
+  &__ranking > input:checked + label:hover,
+  &__ranking > input:checked ~ label:hover,
+  &__ranking > label:hover ~ input:checked ~ label,
+  &__ranking > input:checked ~ label:hover ~ label {
+    color: #fece31;
   }
 }

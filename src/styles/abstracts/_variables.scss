@@ -9,10 +9,3 @@ $light-gray--secondary: #c4c8d1;
 
 $gray: #575f6b;
 $purple: #6d5dfc;
-
-//Positioning
-@mixin FlexCenter {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}

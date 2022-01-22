@@ -1,9 +1,27 @@
 @import "btn";
 @import "input";
-
+//
+//flex-shrink for btns 0 and flex-grow 1 for searh
+//how to centre content witjout creating parrent?
 .nav-panel {
-  padding: 0 100px;
   display: flex;
+  align-content: center;
   align-items: center;
   justify-content: space-evenly;
+  gap: 10px;
+
+  &__search {
+    flex-basis: 50%;
+  }
+  @include respond(medium) {
+    .btn--link {
+      display: none;
+    }
+  }
+}
+
+@include respond-to(small) {
+  .nav-panel > .btn--link {
+    display: none;
+  }
 }

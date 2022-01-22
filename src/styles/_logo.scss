@@ -1,35 +1,60 @@
-.logo {
+.section-logo {
   @include FlexCenter;
+}
+.logo {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-items: center;
   margin-top: 60px;
+  @include respond(phone) {
+    margin-top: 15px;
+  }
+
   &_card {
     @include FlexCenter;
+
+    grid-row: span 2;
     height: 200px;
     width: 200px;
     border-radius: 30%;
     background: linear-gradient(310.59deg, #edb4bf 3.8%, #e5e6ec 119.99%);
     box-shadow: $shadow-outset;
     margin-right: 20px;
+    @include respond(phone) {
+      height: 90px;
+      width: 90px;
+    }
   }
-  &_text1 {
+  &__icon {
+    padding: 10%;
+  }
+  // ask about aligning text wiout margins
+  &__text1 {
+    margin-top: 30px;
     /* Sweet Bear */
     font-family: Courgette;
     font-style: normal;
     font-weight: normal;
-    font-size: 71.5135px;
-    line-height: 89px;
+    font-size: 71px;
     color: #000000;
-    margin-top: -50px;
-  }
-  &_text2 {
-    /* Bakery blog */
 
+    @include respond(phone) {
+      font-size: 40px;
+    }
+  }
+
+  &__text2 {
+    /* Bakery blog */
+    margin-bottom: 30px;
     font-family: Courgette;
-    position: absolute;
     font-style: normal;
     font-weight: normal;
-    font-size: 47.6757px;
-    line-height: 60px;
-    margin: 75px 0 0px 400px;
+    font-size: 48px;
     color: #c8bfbf;
+
+    @include respond(phone) {
+      font-size: 25px;
+    }
   }
 }

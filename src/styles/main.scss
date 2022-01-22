@@ -1,12 +1,17 @@
-@import "./components/variables";
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
 @import "./components/navigation-panel";
 @import "./logo";
 @import "./components/card";
 @import url(//db.onlinewebfonts.com/c/e51dd697f37e546d5076fd21719136b4?family=Baginda+Script);
-
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
 body {
   background-color: $light-gray;
-  margin: 30px;
+  // margin: 30px;
 }
 .subscribe {
   @include FlexCenter;
@@ -15,28 +20,13 @@ body {
   &__btn {
     margin-left: 20px;
   }
+  @include respond(phone) {
+    margin-top: 20px;
+  }
 }
-
-.group-card {
+.latest {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  height: 800px;
-  align-content: center;
-  align-content: center;
-  column-gap: 70px;
-}
-
-.group-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  height: 800px;
-  align-content: center;
-  align-content: center;
-  column-gap: 70px;
 }
