@@ -36,10 +36,9 @@
 
 .group-card {
   padding: 0 25px;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  // grid-auto-columns: auto;
-  /* grid-auto-rows: minmax(300px, 385px); */
   gap: 40px;
 
   @include respond-to(medium) {
@@ -51,27 +50,28 @@
 }
 
 .card {
-  //read about fuctionality of overflow function
   overflow: hidden;
-  width: clamp(200px, 30vw, 400px);
   align-items: stretch;
   border-radius: 14px;
   background: $light-gray;
   box-shadow: $shadow-outset;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 
   @include respond(tab-port) {
     grid-template-columns: 1fr 1fr;
-    width: clamp(200px, 100%, 300px);
   }
   @include respond(phone) {
     grid-template-columns: 1fr;
-    width: clamp(200px, 80vw, 400px);
   }
   &__anker--image {
     display: block;
   }
-
+  &__nav {
+    padding: 5px 10px;
+  }
   &__bookmark {
     position: absolute;
     top: 12px;
@@ -109,12 +109,9 @@
     text-decoration: none;
 
     &--primary {
-      height: 20%;
-      padding: 5px 0;
-      padding-left: 15px;
       display: flex;
       align-items: center;
-      font-size: 28px;
+      font-size: 22px;
       margin-right: auto;
       font-weight: 10;
       color: #000;
@@ -126,7 +123,7 @@
     }
 
     &--secondary {
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 10;
 
       color: #575f6b;
@@ -138,11 +135,8 @@
     }
   }
   &__icon {
-    margin-left: 15px;
   }
   &__ranking-and-button {
-    padding-left: 15px;
-
     display: flex;
     align-content: center;
     align-items: center;
@@ -154,7 +148,6 @@
     }
   }
   &__btn {
-    margin-right: 15px;
     padding: 2px 16px;
     text-transform: uppercase;
     font-size: 15px;
@@ -166,7 +159,6 @@
 
   &__ranking {
     margin-right: auto;
-    margin-bottom: 15px;
     @include respond-to(small) {
       margin-top: 6px;
     }
