@@ -21,6 +21,7 @@
 }
 .section-titles {
   @include FlexCenter;
+  padding: 15px 0;
   font-size: 50px;
   font-family: Faustina, Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
     "Helvetica Neue", sans-serif;
@@ -35,13 +36,14 @@
 }
 
 .group-card {
-  padding: 0 25px;
+  padding: 0 20px;
   width: 100%;
+  max-width: 1200px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 40px;
 
-  @include respond-to(medium) {
+  @include respond-to(large) {
     grid-template-columns: 1fr 1fr;
   }
   @include respond-to(small) {
@@ -60,17 +62,22 @@
   flex-direction: column;
   flex-grow: 1;
 
-  @include respond(tab-port) {
-    grid-template-columns: 1fr 1fr;
-  }
-  @include respond(phone) {
-    grid-template-columns: 1fr;
-  }
+  // @include respond-to(large) {
+  //   grid-template-columns: 1fr 1fr;
+  // }
+  // @include respond-to(small) {
+  //   grid-template-columns: 1fr;
+  // }
   &__anker--image {
     display: block;
   }
   &__nav {
-    padding: 5px 10px;
+    padding: 20px 10px;
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: end;
   }
   &__bookmark {
     position: absolute;
@@ -113,6 +120,8 @@
       align-items: center;
       font-size: 22px;
       margin-right: auto;
+      padding-bottom: 5px;
+      flex-grow: 1;
       font-weight: 10;
       color: #000;
       transition: all 0.3s ease-in-out;
@@ -125,6 +134,7 @@
     &--secondary {
       font-size: 20px;
       font-weight: 10;
+      //wrapper to aligm secondary title inline with icon
 
       color: #575f6b;
       transition: all 0.3s ease-in-out;
@@ -134,13 +144,19 @@
       }
     }
   }
+  &__bakery-type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0;
+  }
   &__icon {
   }
   &__ranking-and-button {
+    width: 100%;
     display: flex;
-    align-content: center;
     align-items: center;
-    justify-content: flex-start;
     flex-wrap: wrap;
     gap: 20px;
     @include respond-to(small) {
@@ -154,13 +170,11 @@
     width: fit-content;
     border: none;
     cursor: pointer;
-    margin-bottom: 15px;
   }
 
   &__ranking {
     margin-right: auto;
     @include respond-to(small) {
-      margin-top: 6px;
     }
   }
   &--star {

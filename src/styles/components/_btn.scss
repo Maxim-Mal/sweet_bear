@@ -41,6 +41,7 @@
   &--sqr {
     height: 55px;
     width: 55px;
+    flex-shrink: 0;
     @include respond-to(small) {
       height: 35px;
       width: 35px;
@@ -61,6 +62,7 @@
     height: 55px;
     width: 55px;
     border-radius: 50%;
+    flex-shrink: 0;
     @include respond-to(small) {
       height: 35px;
       width: 35px;
@@ -73,10 +75,12 @@
   &--subscribe {
     margin-left: 20px;
   }
+  &--sign-in {
+    flex-shrink: 0;
+  }
 
   &--icon-arrow {
     height: 14px;
-    width: 14px;
-    padding: 5px;
+    width: 40px;
   }
 }

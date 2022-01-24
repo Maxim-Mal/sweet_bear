@@ -7,7 +7,7 @@
   align-items: center;
   justify-items: center;
   margin-top: 60px;
-  @include respond(phone) {
+  @include respond-to(small) {
     margin-top: 15px;
   }
 
@@ -15,19 +15,19 @@
     @include FlexCenter;
 
     grid-row: span 2;
-    height: 200px;
-    width: 200px;
+    height: 180px;
+    width: 180px;
     border-radius: 30%;
     background: linear-gradient(310.59deg, #edb4bf 3.8%, #e5e6ec 119.99%);
     box-shadow: $shadow-outset;
     margin-right: 20px;
-    @include respond(phone) {
-      height: 90px;
-      width: 90px;
+    @include respond-to(small) {
+      height: 100px;
+      width: 100px;
     }
   }
   &__icon {
-    padding: 10%;
+    margin: 5px;
   }
   // ask about aligning text wiout margins
   &__text1 {
@@ -39,7 +39,7 @@
     font-size: 71px;
     color: #000000;
 
-    @include respond(phone) {
+    @include respond-to(small) {
       font-size: 40px;
     }
   }
@@ -53,7 +53,7 @@
     font-size: 48px;
     color: #c8bfbf;
 
-    @include respond(phone) {
+    @include respond-to(small) {
       font-size: 25px;
     }
   }

@@ -8,20 +8,17 @@
   align-content: center;
   align-items: center;
   justify-content: space-evenly;
-  gap: 10px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 25px 0px 25px;
+  gap: 20px;
 
-  &__search {
-    flex-basis: 50%;
-  }
-  @include respond(medium) {
+  @include respond-to(huge) {
     .btn--link {
       display: none;
     }
   }
-}
-
-@include respond-to(small) {
-  .nav-panel > .btn--link {
-    display: none;
+  @include respond-to(small) {
+    gap: 13px;
   }
 }
