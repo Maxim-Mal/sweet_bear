@@ -1,12 +1,13 @@
 .btn {
   @include FlexCenter;
   border-radius: 14px;
-  color: $gray;
-  font-family: ROBOTO;
+  font-family: $roboto;
   font-size: 18px;
-  background: $light-gray;
+  background: $cGray30;
   box-shadow: $shadow-outset;
   text-decoration: none;
+  color: $cGray;
+
   @include respond-to(small) {
     font-size: 15px;
   }
@@ -16,35 +17,37 @@
   }
 
   &:hover {
-    fill: $purple;
-    color: $purple;
+    fill: $cPurple;
+    color: $cPurple;
   }
 
-  &:hover &--icon {
-    fill: $purple;
+  &:hover &__icon {
+    fill: $cPurple;
   }
 
-  &:hover &--icon-arrow {
+  &:hover &__icon-arrow {
     transform: translate(15px);
   }
 
-  &--icon {
+  &__icon {
     height: 20px;
     width: 24px;
-    fill: $gray;
     transition: all 0.3s ease;
+    fill: $cGray;
+
     @include respond-to(small) {
       height: 16px;
     }
   }
 
   &--sqr {
-    height: 55px;
-    width: 55px;
+    height: $normal-square-and-round-btn-size;
+    width: $normal-square-and-round-btn-size;
     flex-shrink: 0;
+
     @include respond-to(small) {
-      height: 35px;
-      width: 35px;
+      height: $small-square-and-round-btn-size;
+      width: $small-square-and-round-btn-size;
       border-radius: 50%;
     }
   }
@@ -54,32 +57,37 @@
     height: 41px;
     width: fit-content;
     transition: all 0.3s ease;
+
     @include respond-to(small) {
       height: 30px;
     }
   }
+
   &--round {
-    height: 55px;
-    width: 55px;
-    border-radius: 50%;
     flex-shrink: 0;
+    height: $normal-square-and-round-btn-size;
+    width: $normal-square-and-round-btn-size;
+    border-radius: 50%;
+
     @include respond-to(small) {
-      height: 35px;
-      width: 35px;
+      height: $small-square-and-round-btn-size;
+      width: $small-square-and-round-btn-size;
     }
   }
 
   &--lang {
     transition: all 0.3s ease;
   }
+
   &--subscribe {
     margin-left: 20px;
   }
+
   &--sign-in {
     flex-shrink: 0;
   }
 
-  &--icon-arrow {
+  &__icon-arrow {
     height: 14px;
     width: 40px;
   }

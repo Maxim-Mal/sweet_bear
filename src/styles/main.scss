@@ -1,34 +1,22 @@
+@import "./utils/fonts";
 @import "./abstracts/variables";
 @import "./abstracts/mixins";
 @import "./components/navigation-panel";
-@import "./logo";
+@import "./components/logo";
+@import "./components/sections";
 @import "./components/card";
-@import url(//db.onlinewebfonts.com/c/e51dd697f37e546d5076fd21719136b4?family=Baginda+Script);
+
 *,
 ::before,
 ::after {
   box-sizing: border-box;
   margin: 0;
 }
+
 body {
-  background-color: $light-gray;
-  // margin: 30px;
+  background-color: $cGray30;
 }
-.subscribe {
-  @include FlexCenter;
 
-  margin: 0 auto;
-  margin-top: 50px;
-  max-width: 600px;
-  width: 70%;
-
-  &__btn {
-    margin-left: 20px;
-  }
-  @include respond-to(small) {
-    margin-top: 20px;
-  }
-}
 .latest {
   display: flex;
   flex-direction: column;

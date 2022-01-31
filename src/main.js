@@ -1,4 +1,3 @@
 import "./styles/main.scss";
-import { bookmarkOnCard, initCards } from "./scripts/card";
+import { initCards } from "../src/script/card";
 initCards();
-bookmarkOnCard();

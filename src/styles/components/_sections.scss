@@ -1,0 +1,30 @@
+.latest__title {
+  @include FlexCenter;
+  padding: 15px 0;
+  font-size: 50px;
+  font-family: $faustina;
+
+  &--handwritten {
+    padding-left: 10px;
+    font-size: 62px;
+    font-family: $baginda-script;
+    font-style: normal;
+    font-weight: 100;
+  }
+}
+.subscribe {
+  @include FlexCenter;
+
+  margin: 0 auto;
+  margin-top: 50px;
+  max-width: 600px;
+  width: 70%;
+
+  &__btn {
+    margin-left: 20px;
+  }
+
+  @include respond-to(small) {
+    margin-top: 20px;
+  }
+}
