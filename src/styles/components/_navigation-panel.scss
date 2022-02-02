@@ -11,11 +11,16 @@
   margin: auto;
   padding: 15px 25px 0px 25px;
 
+  &__search {
+    max-width: 500px;
+  }
+
   @include respond-to(huge) {
     .btn--link {
       display: none;
     }
   }
+
   @include respond-to(small) {
     gap: 13px;
   }

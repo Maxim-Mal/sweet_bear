@@ -3,8 +3,10 @@
 @import "./abstracts/mixins";
 @import "./components/navigation-panel";
 @import "./components/logo";
+@import "./components/subscribe";
 @import "./components/sections";
 @import "./components/card";
+@import "./components/ranking";
 
 *,
 ::before,
@@ -15,11 +17,4 @@
 
 body {
   background-color: $cGray30;
-}
-
-.latest {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }

@@ -1,3 +1,7 @@
+//Btn sizes
+$normal-square-and-round-btn-size: 55px;
+$small-square-and-round-btn-size: 35px;
+
 .btn {
   @include FlexCenter;
   border-radius: 14px;

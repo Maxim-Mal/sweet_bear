@@ -1,0 +1,35 @@
+.ranking {
+  margin-right: auto;
+  transform: rotateY(-180deg);
+
+  @include respond-to(small) {
+  }
+}
+
+.ranking label::before {
+  display: inline-block;
+  content: "\2605";
+  font-size: 20px;
+}
+
+.ranking input {
+  display: none;
+}
+
+.ranking label {
+  color: $cGray;
+  cursor: pointer;
+}
+
+.ranking > input:checked ~ label,
+.ranking > input:not(:checked) > label:hover,
+.ranking > input:not(:checked) > label:hover ~ label {
+  color: $cOrange;
+}
+
+.ranking > input:checked + label:hover,
+.ranking > input:checked ~ label:hover,
+.ranking > label:hover ~ input:checked ~ label,
+.ranking > input:checked ~ label:hover ~ label {
+  color: $cYellow;
+}
