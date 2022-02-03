@@ -1,0 +1,53 @@
+//Positioning
+@mixin FlexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin normalSquareAndRoundBtnSize {
+  height: 55px;
+  width: 55px;
+}
+@mixin smallSquareAndRoundBtnSize {
+  height: 35px;
+  width: 35px;
+}
+
+$breakpoints: (
+  "small": (
+    max-width: 576px,
+  ),
+  "medium": (
+    max-width: 768px,
+  ),
+  "large": (
+    max-width: 1024px,
+  ),
+  "huge": (
+    max-width: 1280px,
+  ),
+  "hd": (
+    max-width: 1920px,
+  ),
+);
+
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == "string",
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media only screen and #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. '
+
+    + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}

@@ -6,168 +6,1069 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Courgette&family=Roboto"
+      href="https://fonts.googleapis.com/css2?family=Courgette&family=Roboto&family=Faustina"
+    />
+    <link
+      href="//db.onlinewebfonts.com/c/e51dd697f37e546d5076fd21719136b4?family=Baginda+Script"
+      rel="stylesheet"
+      type="text/css"
     />
     <title>Sweet Bear - Bakery blog</title>
   </head>
   <body>
-    <nav class="nav-panel">
-      <a href="#" class="btn btn--sqr nav-panel_home-btn">
-        <svg class="btn--icon">
-          <use href="./assets/icons/sprite.svg#home" />
-        </svg>
-      </a>
-      <div class="input-field input-field--with-icon nav-panel_search">
-        <input
-          type="text"
-          class="input-field input-field__input"
-          placeholder="Search..."
-        />
-        <!-- Search icon image -->
-        <svg
-          class="input-field__icon"
-          width="23"
-          height="21"
-          viewBox="0 0 23 21"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            class="input-field__icon--path"
-            d="M18.9026 9.37781C18.9026 13.8698 15.0045 17.5102 10.1966 17.5102C5.38862 17.5102 1.48975 13.8698 1.48975 9.37781C1.48975 4.88584 5.38781 1.24544 10.1958 1.24544C15.0037 1.24544 18.9026 4.88665 18.9026 9.37781Z"
-            stroke-width="2.43072"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+    <header>
+      <nav class="nav-panel">
+        <a href="#" class="btn btn--sqr nav-panel_home-btn">
+          <svg class="btn__icon">
+            <use href="./assets/icons/sprite.svg#home" />
+          </svg>
+        </a>
+        <div class="input-field input-field--with-icon nav-panel__search">
+          <input
+            type="text"
+            class="input-field input-field__input"
+            placeholder="Search..."
           />
-          <path
-            class="input-field__icon--path"
-            d="M20.9352 19.5439L16.5129 15.1216"
-            stroke-width="2.43072"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </div>
-      <a href="#" class="btn btn--link">CAKES</a>
-      <a href="#" class="btn btn--link">BARS</a>
-      <a href="#" class="btn btn--link">VEGAN</a>
-      <a href="#" class="btn btn--link">COOKIES</a>
-      <a href="#" class="btn btn--round">
-        <!-- Bookmark icon -->
-        <svg
-          class="btn-round_icon"
-          width="22"
-          height="28"
-          viewBox="0 0 22 28"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M0.5 28V2.625C0.5 1.92881 0.776562 1.26113 1.26884 0.768845C1.76113 0.276562 2.42881 0 3.125 0L18.875 0C19.5712 0 20.2389 0.276562 20.7312 0.768845C21.2234 1.26113 21.5 1.92881 21.5 2.625V28L11 21.875L0.5 28Z"
-            fill="url(#paint0_linear_124_476)"
-          />
-          <defs>
-            <linearGradient
-              id="paint0_linear_124_476"
-              x1="14.297"
-              y1="16.8"
-              x2="-4.17044"
-              y2="0.588289"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stop-color="#40BB50" />
-              <stop offset="1" stop-color="#205E28" />
-            </linearGradient>
-          </defs>
-        </svg>
-      </a>
-      <a href="#" class="btn btn--sqr btn--lang">EN</a>
-      <a href="#" class="btn btn--link btn--sign-in"
-        >SIGN IN
-        <!-- arrow image -->
-        <svg
-          class="btn--icon btn--icon-arrow"
-          viewBox="0 0 14 14"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M0.0839844 8.03175H10.0386L5.44997 12.6254L6.63797 13.774L13.1926 7.21219L6.63864 0.649704L5.49131 1.79962L10.0386 6.3933H0.0839844V8.03175Z"
-          />
-        </svg>
-      </a>
-    </nav>
-    <div class="logo">
-      <div class="logo_card">
-        <!-- bear image -->
-        <svg
-          class="logo_icon"
-          width="127"
-          height="130"
-          viewBox="0 0 127 130"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M77.54 51.3334C77.5425 51.3588 80.3149 79.516 64.3637 84.2315C64.3637 84.2315 45.2909 80.5243 49.605 51.7373C43.4646 55.5206 38.5345 61.6572 35.6655 69.1401C41.4555 70.1764 45.8662 75.2386 45.8662 81.3194C45.8662 82.3227 45.7328 83.2968 45.5055 84.2327C44.5606 88.1278 41.7768 91.3092 38.1204 92.7926C38.3008 92.7862 38.476 92.7659 38.6576 92.7659C46.8631 92.7659 53.5382 99.4423 53.5382 107.648V111.704C53.5382 114.07 52.9477 116.256 51.9596 118.039C51.3361 119.163 50.5537 120.12 49.6533 120.862H63.904H77.8029C76.938 120.15 76.1823 119.236 75.5715 118.168C74.539 116.361 73.9179 114.129 73.9179 111.704V107.648C73.9179 99.4423 80.5943 92.7659 88.7972 92.7659C89.356 92.7659 89.9098 92.8027 90.4533 92.8624C86.703 91.4133 83.8354 88.1964 82.8752 84.2327C82.6466 83.2968 82.5146 82.3227 82.5146 81.3194C82.5146 75.4253 86.6598 70.4875 92.1818 69.2455C89.2189 61.4451 84.017 55.0913 77.54 51.3334Z"
-            fill="black"
-          />
-          <path
-            d="M77.5398 51.3334C77.5347 51.3309 77.5335 51.3309 77.5309 51.3296C82.6947 47.1716 86.0082 40.8051 86.0082 33.6588C86.0082 31.0032 85.5281 28.4645 84.6886 26.0972C88.4047 24.6405 91.0386 21.0325 91.0386 16.8021C91.0386 11.2852 86.5657 6.81228 81.0488 6.81228C77.0026 6.81228 73.5241 9.22401 71.9556 12.6848C69.2937 11.5888 66.3803 10.9741 63.3234 10.9741C60.6374 10.9741 58.072 11.4656 55.6806 12.3228C54.0372 9.05764 50.6653 6.81228 46.7601 6.81228C41.2432 6.81228 36.7703 11.2852 36.7703 16.8021C36.7703 20.6439 38.942 23.9738 42.122 25.6451C41.1772 28.1407 40.6374 30.8331 40.6374 33.6601C40.6374 41.04 44.1782 47.578 49.6354 51.7208C49.6277 51.7258 49.6189 51.7296 49.6112 51.7335C49.6811 51.7931 55.9917 57.1779 63.5901 57.1779C71.2254 57.1767 77.5309 51.341 77.5398 51.3334Z"
-            fill="black"
-          />
-          <path
-            d="M94.8981 95.9282C94.4359 95.6869 93.9533 95.4773 93.458 95.2894C92.0064 94.742 90.4417 94.4283 88.7983 94.4283C81.5009 94.4283 75.584 100.347 75.584 107.645C75.584 108.335 75.584 111.001 75.584 111.702C75.584 113.862 76.1275 115.847 77.0318 117.411C78.2434 119.511 80.1039 120.86 82.1918 120.86H94.8981H95.4074C99.0561 120.86 102.015 116.759 102.015 111.702C102.015 110.999 102.015 108.335 102.015 107.645C102.015 102.547 99.126 98.1342 94.8981 95.9282Z"
-            fill="black"
-          />
-          <path
-            d="M51.8731 111.703C51.8731 111.001 51.8731 108.336 51.8731 107.646C51.8731 100.348 45.9562 94.4296 38.6575 94.4296C37.1347 94.4296 35.6793 94.7001 34.3179 95.1738C33.8353 95.3427 33.3654 95.5396 32.9107 95.7593C28.4949 97.8992 25.4431 102.41 25.4431 107.646C25.4431 108.336 25.4431 111.002 25.4431 111.703C25.4431 116.76 28.4022 120.861 32.0509 120.861H32.912H45.2678C47.404 120.861 49.2975 119.45 50.5066 117.269C51.3587 115.724 51.8731 113.798 51.8731 111.703Z"
-            fill="black"
-          />
-          <path
-            d="M100.298 72.07C98.7462 71.1632 96.953 70.6285 95.0302 70.6069C94.987 70.6069 94.9439 70.5993 94.8981 70.5993C94.1615 70.5993 93.4402 70.6755 92.7442 70.8165C87.856 71.8147 84.1819 76.1365 84.1819 81.3194C84.1819 82.3303 84.3292 83.3056 84.5921 84.2327C85.8011 88.5165 89.5972 91.7016 94.1946 92.0013C94.4282 92.0178 94.6619 92.0369 94.8994 92.0369C100.818 92.0369 105.617 87.2388 105.617 81.3194C105.616 77.3697 103.476 73.9292 100.298 72.07Z"
-            fill="black"
-          />
-          <path
-            d="M37.8728 47.9069V44.8081V31.5773H35.889V42.0218C35.6642 41.896 35.4369 41.7754 35.1854 41.6789V31.5773H33.2004V41.275C33.0988 41.2712 33.015 41.2344 32.9121 41.2344C32.794 41.2344 32.6975 41.275 32.5807 41.2839V31.5785H30.5944V41.7017C30.3582 41.7944 30.1448 41.9062 29.934 42.023V31.5785H27.949V44.8081V47.9069C27.949 49.2671 29.0424 50.4101 30.5944 51.0146V69.2899C31.5228 69.0664 32.4867 68.9356 33.4836 68.9356C33.9612 68.9356 34.4323 68.9699 34.8959 69.0207V51.1746C36.6447 50.6235 37.8728 49.37 37.8728 47.9069Z"
-            fill="black"
-          />
-          <path
-            d="M33.4837 70.5993C32.4804 70.5993 31.5152 70.7479 30.5944 71.0044C26.0796 72.2668 22.7649 76.4007 22.7649 81.3181C22.7649 87.0445 27.2594 91.708 32.9109 92.0064C33.1014 92.0166 33.2894 92.0356 33.4837 92.0356C33.5294 92.0356 33.5751 92.028 33.6209 92.028C38.4684 91.967 42.5312 88.6892 43.7897 84.2302C44.0514 83.3044 44.2012 82.3277 44.2012 81.3168C44.2012 75.9447 40.2464 71.5112 35.0928 70.7326C35.0267 70.7225 34.962 70.7111 34.8972 70.7034C34.4324 70.6425 33.9638 70.5993 33.4837 70.5993Z"
-            fill="black"
-          />
-          <path
-            d="M100.298 33.4493C100.298 31.9938 99.1185 30.8153 97.6656 30.8153C96.7918 30.8153 96.0247 31.2445 95.5447 31.8986C93.66 33.4073 91.1987 36.9697 91.1987 45.3403C91.1987 52.9653 93.2422 57.2135 95.0303 59.4703V68.9419C96.9175 68.961 98.7032 69.4131 100.298 70.1916V33.4493Z"
-            fill="black"
-          />
-        </svg>
-      </div>
+          <!-- Search icon image -->
+          <svg
+            class="input-field__icon"
+            width="23"
+            height="21"
+            viewBox="0 0 23 21"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class="input-field__icon--path"
+              d="M18.9026 9.37781C18.9026 13.8698 15.0045 17.5102 10.1966 17.5102C5.38862 17.5102 1.48975 13.8698 1.48975 9.37781C1.48975 4.88584 5.38781 1.24544 10.1958 1.24544C15.0037 1.24544 18.9026 4.88665 18.9026 9.37781Z"
+              stroke-width="2.43072"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              class="input-field__icon--path"
+              d="M20.9352 19.5439L16.5129 15.1216"
+              stroke-width="2.43072"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <a href="#" class="btn btn--link">CAKES</a>
+        <a href="#" class="btn btn--link">BARS</a>
+        <a href="#" class="btn btn--link">VEGAN</a>
+        <a href="#" class="btn btn--link">COOKIES</a>
+        <a href="#" class="btn btn--round btn--bookmark">
+          <!-- Bookmark icon -->
+          <svg
+            class="btn__icon"
+            width="22"
+            height="28"
+            viewBox="0 0 22 28"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.5 28V2.625C0.5 1.92881 0.776562 1.26113 1.26884 0.768845C1.76113 0.276562 2.42881 0 3.125 0L18.875 0C19.5712 0 20.2389 0.276562 20.7312 0.768845C21.2234 1.26113 21.5 1.92881 21.5 2.625V28L11 21.875L0.5 28Z"
+              fill="url(#paint0_linear_124_476)"
+            />
+            <defs>
+              <linearGradient
+                id="paint0_linear_124_476"
+                x1="14.297"
+                y1="16.8"
+                x2="-4.17044"
+                y2="0.588289"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#40BB50" />
+                <stop offset="1" stop-color="#205E28" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </a>
+        <a href="#" class="btn btn--sqr btn--lang">EN</a>
+        <a href="#" class="btn btn--link btn--sign-in"
+          >SIGN IN
+          <!-- arrow image -->
+          <svg
+            class="btn__icon btn__icon-arrow"
+            viewBox="0 0 14 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.0839844 8.03175H10.0386L5.44997 12.6254L6.63797 13.774L13.1926 7.21219L6.63864 0.649704L5.49131 1.79962L10.0386 6.3933H0.0839844V8.03175Z"
+            />
+          </svg>
+        </a>
+      </nav>
+    </header>
 
-      <div class="logo_text1">Sweet bear</div>
-      <div class="logo_text2">Bakery blog</div>
-    </div>
-    <div class="subscribe">
-      <div class="input-field">
-        <input
-          type="text"
-          class="input-field__input"
-          placeholder="Enter your e-mail..."
-        />
-        <!-- letter icon image -->
-        <svg
-          class="input-field__icon input-field__icon--letter"
-          width="40"
-          height="29"
-          viewBox="0 0 40 29"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M39.6554 0.910205L20.4101 15.1408C20.1718 15.3172 19.8451 15.3172 19.5978 15.1497L0.149944 1.2896C0.0529528 1.52791 0 1.78408 0 2.0575V26.8905C0 28.0294 0.92711 28.9562 2.0657 28.9562H37.9339C39.0728 28.9562 39.9996 28.0291 39.9996 26.8905V2.06617C40.0085 1.6422 39.8761 1.2361 39.6553 0.909692L39.6554 0.910205ZM1.06783 0.256838L19.9955 13.7371L38.4723 0.0708171C38.3045 0.0267876 38.1191 0.000308502 37.9337 0.000308502L2.07345 0C1.71167 0 1.36744 0.0883679 1.0672 0.256173L1.06783 0.256838Z"
+    <main>
+      <section class="section-logo">
+        <div class="logo">
+          <div class="logo_card">
+            <!-- bear image -->
+            <svg
+              class="logo__icon"
+              width="127"
+              height="130"
+              viewBox="0 0 127 130"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M77.54 51.3334C77.5425 51.3588 80.3149 79.516 64.3637 84.2315C64.3637 84.2315 45.2909 80.5243 49.605 51.7373C43.4646 55.5206 38.5345 61.6572 35.6655 69.1401C41.4555 70.1764 45.8662 75.2386 45.8662 81.3194C45.8662 82.3227 45.7328 83.2968 45.5055 84.2327C44.5606 88.1278 41.7768 91.3092 38.1204 92.7926C38.3008 92.7862 38.476 92.7659 38.6576 92.7659C46.8631 92.7659 53.5382 99.4423 53.5382 107.648V111.704C53.5382 114.07 52.9477 116.256 51.9596 118.039C51.3361 119.163 50.5537 120.12 49.6533 120.862H63.904H77.8029C76.938 120.15 76.1823 119.236 75.5715 118.168C74.539 116.361 73.9179 114.129 73.9179 111.704V107.648C73.9179 99.4423 80.5943 92.7659 88.7972 92.7659C89.356 92.7659 89.9098 92.8027 90.4533 92.8624C86.703 91.4133 83.8354 88.1964 82.8752 84.2327C82.6466 83.2968 82.5146 82.3227 82.5146 81.3194C82.5146 75.4253 86.6598 70.4875 92.1818 69.2455C89.2189 61.4451 84.017 55.0913 77.54 51.3334Z"
+                fill="black"
+              />
+              <path
+                d="M77.5398 51.3334C77.5347 51.3309 77.5335 51.3309 77.5309 51.3296C82.6947 47.1716 86.0082 40.8051 86.0082 33.6588C86.0082 31.0032 85.5281 28.4645 84.6886 26.0972C88.4047 24.6405 91.0386 21.0325 91.0386 16.8021C91.0386 11.2852 86.5657 6.81228 81.0488 6.81228C77.0026 6.81228 73.5241 9.22401 71.9556 12.6848C69.2937 11.5888 66.3803 10.9741 63.3234 10.9741C60.6374 10.9741 58.072 11.4656 55.6806 12.3228C54.0372 9.05764 50.6653 6.81228 46.7601 6.81228C41.2432 6.81228 36.7703 11.2852 36.7703 16.8021C36.7703 20.6439 38.942 23.9738 42.122 25.6451C41.1772 28.1407 40.6374 30.8331 40.6374 33.6601C40.6374 41.04 44.1782 47.578 49.6354 51.7208C49.6277 51.7258 49.6189 51.7296 49.6112 51.7335C49.6811 51.7931 55.9917 57.1779 63.5901 57.1779C71.2254 57.1767 77.5309 51.341 77.5398 51.3334Z"
+                fill="black"
+              />
+              <path
+                d="M94.8981 95.9282C94.4359 95.6869 93.9533 95.4773 93.458 95.2894C92.0064 94.742 90.4417 94.4283 88.7983 94.4283C81.5009 94.4283 75.584 100.347 75.584 107.645C75.584 108.335 75.584 111.001 75.584 111.702C75.584 113.862 76.1275 115.847 77.0318 117.411C78.2434 119.511 80.1039 120.86 82.1918 120.86H94.8981H95.4074C99.0561 120.86 102.015 116.759 102.015 111.702C102.015 110.999 102.015 108.335 102.015 107.645C102.015 102.547 99.126 98.1342 94.8981 95.9282Z"
+                fill="black"
+              />
+              <path
+                d="M51.8731 111.703C51.8731 111.001 51.8731 108.336 51.8731 107.646C51.8731 100.348 45.9562 94.4296 38.6575 94.4296C37.1347 94.4296 35.6793 94.7001 34.3179 95.1738C33.8353 95.3427 33.3654 95.5396 32.9107 95.7593C28.4949 97.8992 25.4431 102.41 25.4431 107.646C25.4431 108.336 25.4431 111.002 25.4431 111.703C25.4431 116.76 28.4022 120.861 32.0509 120.861H32.912H45.2678C47.404 120.861 49.2975 119.45 50.5066 117.269C51.3587 115.724 51.8731 113.798 51.8731 111.703Z"
+                fill="black"
+              />
+              <path
+                d="M100.298 72.07C98.7462 71.1632 96.953 70.6285 95.0302 70.6069C94.987 70.6069 94.9439 70.5993 94.8981 70.5993C94.1615 70.5993 93.4402 70.6755 92.7442 70.8165C87.856 71.8147 84.1819 76.1365 84.1819 81.3194C84.1819 82.3303 84.3292 83.3056 84.5921 84.2327C85.8011 88.5165 89.5972 91.7016 94.1946 92.0013C94.4282 92.0178 94.6619 92.0369 94.8994 92.0369C100.818 92.0369 105.617 87.2388 105.617 81.3194C105.616 77.3697 103.476 73.9292 100.298 72.07Z"
+                fill="black"
+              />
+              <path
+                d="M37.8728 47.9069V44.8081V31.5773H35.889V42.0218C35.6642 41.896 35.4369 41.7754 35.1854 41.6789V31.5773H33.2004V41.275C33.0988 41.2712 33.015 41.2344 32.9121 41.2344C32.794 41.2344 32.6975 41.275 32.5807 41.2839V31.5785H30.5944V41.7017C30.3582 41.7944 30.1448 41.9062 29.934 42.023V31.5785H27.949V44.8081V47.9069C27.949 49.2671 29.0424 50.4101 30.5944 51.0146V69.2899C31.5228 69.0664 32.4867 68.9356 33.4836 68.9356C33.9612 68.9356 34.4323 68.9699 34.8959 69.0207V51.1746C36.6447 50.6235 37.8728 49.37 37.8728 47.9069Z"
+                fill="black"
+              />
+              <path
+                d="M33.4837 70.5993C32.4804 70.5993 31.5152 70.7479 30.5944 71.0044C26.0796 72.2668 22.7649 76.4007 22.7649 81.3181C22.7649 87.0445 27.2594 91.708 32.9109 92.0064C33.1014 92.0166 33.2894 92.0356 33.4837 92.0356C33.5294 92.0356 33.5751 92.028 33.6209 92.028C38.4684 91.967 42.5312 88.6892 43.7897 84.2302C44.0514 83.3044 44.2012 82.3277 44.2012 81.3168C44.2012 75.9447 40.2464 71.5112 35.0928 70.7326C35.0267 70.7225 34.962 70.7111 34.8972 70.7034C34.4324 70.6425 33.9638 70.5993 33.4837 70.5993Z"
+                fill="black"
+              />
+              <path
+                d="M100.298 33.4493C100.298 31.9938 99.1185 30.8153 97.6656 30.8153C96.7918 30.8153 96.0247 31.2445 95.5447 31.8986C93.66 33.4073 91.1987 36.9697 91.1987 45.3403C91.1987 52.9653 93.2422 57.2135 95.0303 59.4703V68.9419C96.9175 68.961 98.7032 69.4131 100.298 70.1916V33.4493Z"
+                fill="black"
+              />
+            </svg>
+          </div>
+          <div class="logo__title">Sweet bear</div>
+          <div class="logo__subtitle">Bakery blog</div>
+        </div>
+      </section>
+      <section class="section-subscribe">
+        <div class="input-field">
+          <input
+            type="text"
+            class="input-field__input"
+            placeholder="Enter your e-mail..."
           />
-        </svg>
-      </div>
-      <a href="#" class="btn btn--link subscribe__btn">SUBSCRIBE</a>
-    </div>
+          <!-- letter icon image -->
+          <svg
+            class="input-field__icon input-field__icon--letter"
+            width="40"
+            height="29"
+            viewBox="0 0 40 29"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M39.6554 0.910205L20.4101 15.1408C20.1718 15.3172 19.8451 15.3172 19.5978 15.1497L0.149944 1.2896C0.0529528 1.52791 0 1.78408 0 2.0575V26.8905C0 28.0294 0.92711 28.9562 2.0657 28.9562H37.9339C39.0728 28.9562 39.9996 28.0291 39.9996 26.8905V2.06617C40.0085 1.6422 39.8761 1.2361 39.6553 0.909692L39.6554 0.910205ZM1.06783 0.256838L19.9955 13.7371L38.4723 0.0708171C38.3045 0.0267876 38.1191 0.000308502 37.9337 0.000308502L2.07345 0C1.71167 0 1.36744 0.0883679 1.0672 0.256173L1.06783 0.256838Z"
+            />
+          </svg>
+        </div>
+        <a href="#" class="btn btn--link section-subscribe__btn">SUBSCRIBE</a>
+      </section>
+      <section class="section-latest">
+        <h2 class="latest__title">
+          Latest <span class="latest__title--handwritten">Recipes</span>
+        </h2>
+        <div class="group-card">
+          <div class="card">
+            <a class="card__image-link" href="#"
+              ><img
+                alt="bakery image "
+                class="card__image"
+                src="./assets/Images/mike-meeks-zk-fclJdGas-unsplash 1.png"
+            /></a>
+
+            <div class="card__bookmark">
+              <svg
+                class="card__bookmark-icon"
+                width="37"
+                height="49"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g filter="url(#a)">
+                  <path
+                    d="M4.095 39.302V4.422A3.612 3.612 0 0 1 7.708.809h21.648a3.612 3.612 0 0 1 3.613 3.613v34.88l-14.439-8.42-14.435 8.42Z"
+                    fill="url(#b)"
+                  />
+                  <path
+                    d="M4.595 38.431V4.421A3.112 3.112 0 0 1 7.708 1.31h21.648a3.113 3.113 0 0 1 3.113 3.113v34.01L18.782 30.45l-.252-.146-.252.146-13.683 7.982Z"
+                    stroke="#24415D"
+                    stroke-opacity=".64"
+                  />
+                </g>
+                <defs>
+                  <linearGradient
+                    id="b"
+                    x1="7.243"
+                    y1="36.299"
+                    x2="8.576"
+                    y2=".831"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#EDEDF2" />
+                    <stop offset="1" stop-color="#C1C1C1" />
+                  </linearGradient>
+                  <filter
+                    id="a"
+                    x=".095"
+                    y=".809"
+                    width="36.873"
+                    height="47.492"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix
+                      in="SourceAlpha"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha"
+                    />
+                    <feOffset dy="5" />
+                    <feGaussianBlur stdDeviation="2" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"
+                    />
+                    <feBlend
+                      in2="BackgroundImageFix"
+                      result="effect1_dropShadow_124_493"
+                    />
+                    <feBlend
+                      in="SourceGraphic"
+                      in2="effect1_dropShadow_124_493"
+                      result="shape"
+                    />
+                  </filter>
+                </defs>
+              </svg>
+            </div>
+            <div class="card__content">
+              <a href="#" class="card__title">Babka z kremem</a>
+              <div class="card__bakery-type">
+                <svg
+                  class="card__icon"
+                  width="27"
+                  height="27"
+                  viewBox="0 0 27 27"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3.06288 5.38007C3.12947 5.4465 3.22935 5.47971 3.29593 5.47971C3.36252 5.47971 3.46239 5.4465 3.52898 5.38007L3.59556 5.31365L4.12824 5.87823L3.66215 6.34317C3.12947 6.87454 3.12947 7.73801 3.66215 8.30258L18.7102 23.3137C18.9766 23.5793 19.3428 23.7122 19.6757 23.7122C20.0086 23.7122 20.3748 23.5793 20.6412 23.3137L21.1073 22.8487L21.6732 23.4133L21.6067 23.4797C21.4735 23.6125 21.4735 23.8118 21.6067 23.9447L24.1702 26.5018C24.4698 26.8007 24.9026 27 25.3354 27C25.7682 27 26.201 26.8339 26.5006 26.5018C26.8002 26.203 27 25.7712 27 25.3395C27 24.9077 26.8335 24.476 26.5006 24.1771L23.9371 21.6199C23.8039 21.4871 23.6042 21.4871 23.471 21.6199H23.4377L22.9051 21.0554L23.3711 20.5904C23.9038 20.059 23.9038 19.1956 23.3711 18.631L8.32306 3.65314C7.79038 3.12177 6.92478 3.12177 6.35882 3.65314L5.89272 4.11808L5.32676 3.58672L5.39334 3.5203C5.45993 3.45387 5.49322 3.38745 5.49322 3.28782C5.49322 3.18819 5.45993 3.12177 5.39334 3.05535L2.82984 0.498155C2.53021 0.199262 2.09741 0 1.66461 0C1.23181 0 0.799014 0.166052 0.499383 0.498155C0.199753 0.797048 0 1.22878 0 1.66052C0 2.09225 0.166461 2.52399 0.499383 2.82288L3.06288 5.38007ZM26.0345 24.5756C26.2343 24.7749 26.3342 25.0074 26.3342 25.2731C26.3342 25.5387 26.2343 25.7712 26.0345 25.9705C25.6683 26.3358 25.0025 26.3358 24.6363 25.9705L22.3058 23.6458L22.3724 23.5793L23.0049 22.9483L23.7041 22.2509L26.0345 24.5756ZM22.5388 22.4834L22.1393 22.8819L21.5734 22.3506L22.3724 21.5535L22.9051 22.0849L22.5388 22.4834ZM6.82491 4.11808C7.09125 3.8524 7.55734 3.8524 7.82367 4.11808L22.8718 19.1292C23.1381 19.3948 23.1381 19.8598 22.8718 20.1255L20.1751 22.8155C19.9088 23.0812 19.4427 23.0812 19.1763 22.8155L4.12824 7.83764C3.8619 7.57196 3.8619 7.10701 4.12824 6.84133L4.82737 6.14391L6.09248 4.88192L6.82491 4.11808ZM4.86067 4.05166L5.42663 4.58303L4.62762 5.38007L4.09494 4.84871L4.49445 4.45018L4.86067 4.05166ZM0.965475 0.99631C1.16523 0.797048 1.39827 0.697417 1.66461 0.697417C1.93095 0.697417 2.164 0.797048 2.36375 0.99631L4.6942 3.32103L3.99507 4.01845L3.36252 4.64945L3.29593 4.71587L0.965475 2.39114C0.765721 2.19188 0.665845 1.95941 0.665845 1.69373C0.665845 1.42804 0.799013 1.16236 0.965475 0.99631Z"
+                    fill="black"
+                  />
+                </svg>
+
+                <a href="#" class="card__bakery-type-title">Mafinki</a>
+              </div>
+              <div class="card__ranking-and-button">
+                <div class="ranking">
+                  <input
+                    class="ranking__input"
+                    class="ranking__input"
+                    type="radio"
+                    name="ranking-1"
+                    id="star-1-1"
+                  /><label for="star-1-1" class="ranking__label"> </label>
+                  <input
+                    type="radio"
+                    class="ranking__input"
+                    name="ranking-1"
+                    id="star-2-1"
+                  /><label class="ranking__label" for="star-2-1"> </label>
+                  <input
+                    type="radio"
+                    class="ranking__input"
+                    name="ranking-1"
+                    id="star-3-1"
+                  /><label class="ranking__label" for="star-3-1"> </label>
+                  <input
+                    type="radio"
+                    class="ranking__input"
+                    name="ranking-1"
+                    id="star-4-1"
+                  /><label class="ranking__label" for="star-4-1"> </label>
+                  <input
+                    type="radio"
+                    class="ranking__input"
+                    name="ranking-1"
+                    id="star-5-1"
+                  /><label class="ranking__label" for="star-5-1"> </label>
+                </div>
+                <button class="card__btn btn btn--link">
+                  SHOW Ingridients
+                </button>
+              </div>
+            </div>
+            <div class="card__back-side">
+              <ol class="list list__ingridients">
+                <li>Milk - 100 g</li>
+                <li>Salt - 10g</li>
+                <li>Flour - 1kg</li>
+                <li>Sugar - 200g</li>
+                <li>Water - 1l</li>
+                <li>Cacao - 100g</li>
+                <li>Butter - 200g</li>
+                <li>Water</li>
+                <li>Braun sugar - 13g</li>
+                <li>Braun sugar</li>
+              </ol>
+            </div>
+          </div>
+          <div class="card">
+            <a class="card__image-link" href="#"
+              ><img
+                alt="bakery image"
+                class="card__image"
+                src="./assets/Images/13on-z4BJGODf6O4-unsplash.jpg"
+            /></a>
+
+            <div class="card__bookmark">
+              <svg
+                class="card__bookmark-icon"
+                width="37"
+                height="49"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g filter="url(#a)">
+                  <path
+                    d="M4.095 39.302V4.422A3.612 3.612 0 0 1 7.708.809h21.648a3.612 3.612 0 0 1 3.613 3.613v34.88l-14.439-8.42-14.435 8.42Z"
+                    fill="url(#b)"
+                  />
+                  <path
+                    d="M4.595 38.431V4.421A3.112 3.112 0 0 1 7.708 1.31h21.648a3.113 3.113 0 0 1 3.113 3.113v34.01l-13.687-7.983-.252-.146-.252.146-13.683 7.982Z"
+                    stroke="#24415D"
+                    stroke-opacity=".64"
+                  />
+                </g>
+                <defs>
+                  <linearGradient
+                    id="b"
+                    x1="7.243"
+                    y1="36.299"
+                    x2="8.576"
+                    y2=".831"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#EDEDF2" />
+                    <stop offset="1" stop-color="#C1C1C1" />
+                  </linearGradient>
+                  <filter
+                    id="a"
+                    x=".095"
+                    y=".809"
+                    width="36.873"
+                    height="47.492"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix
+                      in="SourceAlpha"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha"
+                    />
+                    <feOffset dy="5" />
+                    <feGaussianBlur stdDeviation="2" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"
+                    />
+                    <feBlend
+                      in2="BackgroundImageFix"
+                      result="effect1_dropShadow_124_493"
+                    />
+                    <feBlend
+                      in="SourceGraphic"
+                      in2="effect1_dropShadow_124_493"
+                      result="shape"
+                    />
+                  </filter>
+                </defs>
+              </svg>
+            </div>
+            <!-- <div class="card__description"> -->
+            <div class="card__content">
+              <a href="#" class="card__title"
+                >Tartaletka z śmietankowym kremem</a
+              >
+              <div class="card__bakery-type">
+                <svg
+                  class="card__icon"
+                  width="27"
+                  height="27"
+                  viewBox="0 0 27 27"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3.06288 5.38007C3.12947 5.4465 3.22935 5.47971 3.29593 5.47971C3.36252 5.47971 3.46239 5.4465 3.52898 5.38007L3.59556 5.31365L4.12824 5.87823L3.66215 6.34317C3.12947 6.87454 3.12947 7.73801 3.66215 8.30258L18.7102 23.3137C18.9766 23.5793 19.3428 23.7122 19.6757 23.7122C20.0086 23.7122 20.3748 23.5793 20.6412 23.3137L21.1073 22.8487L21.6732 23.4133L21.6067 23.4797C21.4735 23.6125 21.4735 23.8118 21.6067 23.9447L24.1702 26.5018C24.4698 26.8007 24.9026 27 25.3354 27C25.7682 27 26.201 26.8339 26.5006 26.5018C26.8002 26.203 27 25.7712 27 25.3395C27 24.9077 26.8335 24.476 26.5006 24.1771L23.9371 21.6199C23.8039 21.4871 23.6042 21.4871 23.471 21.6199H23.4377L22.9051 21.0554L23.3711 20.5904C23.9038 20.059 23.9038 19.1956 23.3711 18.631L8.32306 3.65314C7.79038 3.12177 6.92478 3.12177 6.35882 3.65314L5.89272 4.11808L5.32676 3.58672L5.39334 3.5203C5.45993 3.45387 5.49322 3.38745 5.49322 3.28782C5.49322 3.18819 5.45993 3.12177 5.39334 3.05535L2.82984 0.498155C2.53021 0.199262 2.09741 0 1.66461 0C1.23181 0 0.799014 0.166052 0.499383 0.498155C0.199753 0.797048 0 1.22878 0 1.66052C0 2.09225 0.166461 2.52399 0.499383 2.82288L3.06288 5.38007ZM26.0345 24.5756C26.2343 24.7749 26.3342 25.0074 26.3342 25.2731C26.3342 25.5387 26.2343 25.7712 26.0345 25.9705C25.6683 26.3358 25.0025 26.3358 24.6363 25.9705L22.3058 23.6458L22.3724 23.5793L23.0049 22.9483L23.7041 22.2509L26.0345 24.5756ZM22.5388 22.4834L22.1393 22.8819L21.5734 22.3506L22.3724 21.5535L22.9051 22.0849L22.5388 22.4834ZM6.82491 4.11808C7.09125 3.8524 7.55734 3.8524 7.82367 4.11808L22.8718 19.1292C23.1381 19.3948 23.1381 19.8598 22.8718 20.1255L20.1751 22.8155C19.9088 23.0812 19.4427 23.0812 19.1763 22.8155L4.12824 7.83764C3.8619 7.57196 3.8619 7.10701 4.12824 6.84133L4.82737 6.14391L6.09248 4.88192L6.82491 4.11808ZM4.86067 4.05166L5.42663 4.58303L4.62762 5.38007L4.09494 4.84871L4.49445 4.45018L4.86067 4.05166ZM0.965475 0.99631C1.16523 0.797048 1.39827 0.697417 1.66461 0.697417C1.93095 0.697417 2.164 0.797048 2.36375 0.99631L4.6942 3.32103L3.99507 4.01845L3.36252 4.64945L3.29593 4.71587L0.965475 2.39114C0.765721 2.19188 0.665845 1.95941 0.665845 1.69373C0.665845 1.42804 0.799013 1.16236 0.965475 0.99631Z"
+                    fill="black"
+                  />
+                </svg>
+
+                <a href="#" class="card__bakery-type-title">Tartaletki</a>
+              </div>
+              <div class="card__ranking-and-button">
+                <div class="ranking">
+                  <input
+                    type="radio"
+                    class="ranking__input"
+                    name="ranking-2"
+                    id="star-1-2"
+                  /><label class="ranking__label" for="star-1-2"> </label>
+                  <input
+                    type="radio"
+                    class="ranking__input"
+                    name="ranking-2"
+                    id="star-2-2"
+                  /><label class="ranking__label" for="star-2-2"> </label>
+                  <input
+                    type="radio"
+                    class="ranking__input"
+                    name="ranking-2"
+                    id="star-3-2"
+                  /><label class="ranking__label" for="star-3-2"> </label>
+                  <input
+                    type="radio"
+                    class="ranking__input"
+                    name="ranking-2"
+                    id="star-4-2"
+                  /><label class="ranking__label" for="star-4-2"> </label>
+                  <input
+                    type="radio"
+                    class="ranking__input"
+                    name="ranking-2"
+                    id="star-5-2"
+                  /><label class="ranking__label" for="star-5-2"> </label>
+                </div>
+                <button class="card__btn btn btn--link">
+                  SHOW Ingridients
+                </button>
+              </div>
+            </div>
+            <div class="card__back-side">
+              <ol class="list list__ingridients">
+                <li>Milk - 100 g</li>
+                <li>Salt - 10g</li>
+                <li>Flour - 1kg</li>
+                <li>Sugar -200g</li>
+                <li>Water - 1l</li>
+                <li>Cacao - 100g</li>
+                <li>Butter - 200g</li>
+                <li>Water</li>
+                <li>Braun sugar - 13g</li>
+                <li>Braun sugar</li>
+              </ol>
+            </div>
+          </div>
+          <div class="card">
+            <a class="card__image-link" href="#"
+              ><img
+                alt="bakery image"
+                class="card__image"
+                src="./assets/Images/claudia-soares-ewOrvEa87j4-unsplash.jpg"
+            /></a>
+
+            <div class="card__bookmark">
+              <svg
+                class="card__bookmark-icon"
+                width="37"
+                height="49"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g filter="url(#a)">
+                  <path
+                    d="M4.095 39.302V4.422A3.612 3.612 0 0 1 7.708.809h21.648a3.612 3.612 0 0 1 3.613 3.613v34.88l-14.439-8.42-14.435 8.42Z"
+                    fill="url(#b)"
+                  />
+                  <path
+                    d="M4.595 38.431V4.421A3.112 3.112 0 0 1 7.708 1.31h21.648a3.113 3.113 0 0 1 3.113 3.113v34.01l-13.687-7.983-.252-.146-.252.146-13.683 7.982Z"
+                    stroke="#24415D"
+                    stroke-opacity=".64"
+                  />
+                </g>
+                <defs>
+                  <linearGradient
+                    id="b"
+                    x1="7.243"
+                    y1="36.299"
+                    x2="8.576"
+                    y2=".831"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#EDEDF2" />
+                    <stop offset="1" stop-color="#C1C1C1" />
+                  </linearGradient>
+                  <filter
+                    id="a"
+                    x=".095"
+                    y=".809"
+                    width="36.873"
+                    height="47.492"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix
+                      in="SourceAlpha"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha"
+                    />
+                    <feOffset dy="5" />
+                    <feGaussianBlur stdDeviation="2" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"
+                    />
+                    <feBlend
+                      in2="BackgroundImageFix"
+                      result="effect1_dropShadow_124_493"
+                    />
+                    <feBlend
+                      in="SourceGraphic"
+                      in2="effect1_dropShadow_124_493"
+                      result="shape"
+                    />
+                  </filter>
+                </defs>
+              </svg>
+            </div>
+            <!-- <div class="card__description"> -->
+            <div class="card__content">
+              <a href="#" class="card__title">Owocowy mus z jagodami</a>
+              <div class="card__bakery-type">
+                <svg
+                  class="card__icon"
+                  width="27"
+                  height="27"
+                  viewBox="0 0 27 27"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3.06288 5.38007C3.12947 5.4465 3.22935 5.47971 3.29593 5.47971C3.36252 5.47971 3.46239 5.4465 3.52898 5.38007L3.59556 5.31365L4.12824 5.87823L3.66215 6.34317C3.12947 6.87454 3.12947 7.73801 3.66215 8.30258L18.7102 23.3137C18.9766 23.5793 19.3428 23.7122 19.6757 23.7122C20.0086 23.7122 20.3748 23.5793 20.6412 23.3137L21.1073 22.8487L21.6732 23.4133L21.6067 23.4797C21.4735 23.6125 21.4735 23.8118 21.6067 23.9447L24.1702 26.5018C24.4698 26.8007 24.9026 27 25.3354 27C25.7682 27 26.201 26.8339 26.5006 26.5018C26.8002 26.203 27 25.7712 27 25.3395C27 24.9077 26.8335 24.476 26.5006 24.1771L23.9371 21.6199C23.8039 21.4871 23.6042 21.4871 23.471 21.6199H23.4377L22.9051 21.0554L23.3711 20.5904C23.9038 20.059 23.9038 19.1956 23.3711 18.631L8.32306 3.65314C7.79038 3.12177 6.92478 3.12177 6.35882 3.65314L5.89272 4.11808L5.32676 3.58672L5.39334 3.5203C5.45993 3.45387 5.49322 3.38745 5.49322 3.28782C5.49322 3.18819 5.45993 3.12177 5.39334 3.05535L2.82984 0.498155C2.53021 0.199262 2.09741 0 1.66461 0C1.23181 0 0.799014 0.166052 0.499383 0.498155C0.199753 0.797048 0 1.22878 0 1.66052C0 2.09225 0.166461 2.52399 0.499383 2.82288L3.06288 5.38007ZM26.0345 24.5756C26.2343 24.7749 26.3342 25.0074 26.3342 25.2731C26.3342 25.5387 26.2343 25.7712 26.0345 25.9705C25.6683 26.3358 25.0025 26.3358 24.6363 25.9705L22.3058 23.6458L22.3724 23.5793L23.0049 22.9483L23.7041 22.2509L26.0345 24.5756ZM22.5388 22.4834L22.1393 22.8819L21.5734 22.3506L22.3724 21.5535L22.9051 22.0849L22.5388 22.4834ZM6.82491 4.11808C7.09125 3.8524 7.55734 3.8524 7.82367 4.11808L22.8718 19.1292C23.1381 19.3948 23.1381 19.8598 22.8718 20.1255L20.1751 22.8155C19.9088 23.0812 19.4427 23.0812 19.1763 22.8155L4.12824 7.83764C3.8619 7.57196 3.8619 7.10701 4.12824 6.84133L4.82737 6.14391L6.09248 4.88192L6.82491 4.11808ZM4.86067 4.05166L5.42663 4.58303L4.62762 5.38007L4.09494 4.84871L4.49445 4.45018L4.86067 4.05166ZM0.965475 0.99631C1.16523 0.797048 1.39827 0.697417 1.66461 0.697417C1.93095 0.697417 2.164 0.797048 2.36375 0.99631L4.6942 3.32103L3.99507 4.01845L3.36252 4.64945L3.29593 4.71587L0.965475 2.39114C0.765721 2.19188 0.665845 1.95941 0.665845 1.69373C0.665845 1.42804 0.799013 1.16236 0.965475 0.99631Z"
+                    fill="black"
+                  />
+                </svg>
+
+                <a href="#" class="card__bakery-type-title">Musy</a>
+              </div>
+              <div class="card__ranking-and-button">
+                <div class="ranking">
+                  <input
+                    type="radio"
+                    class="ranking__input"
+                    name="ranking-3"
+                    id="star-1-3"
+                  /><label class="ranking__label" for="star-1-3"> </label>
+                  <input
+                    type="radio"
+                    class="ranking__input"
+                    name="ranking-3"
+                    id="star-2-3"
+                  /><label class="ranking__label" for="star-2-3"> </label>
+                  <input
+                    type="radio"
+                    class="ranking__input"
+                    name="ranking-3"
+                    id="star-3-3"
+                  /><label class="ranking__label" for="star-3-3"> </label>
+                  <input
+                    type="radio"
+                    class="ranking__input"
+                    name="ranking-3"
+                    id="star-4-3"
+                  /><label class="ranking__label" for="star-4-3"> </label>
+                  <input
+                    type="radio"
+                    class="ranking__input"
+                    name="ranking-3"
+                    id="star-5-3"
+                  /><label class="ranking__label" for="star-5-3"> </label>
+                </div>
+                <button class="card__btn btn btn--link">
+                  SHOW Ingridients
+                </button>
+              </div>
+            </div>
+            <div class="card__back-side">
+              <ol class="list list__ingridients">
+                <li>Milk - 100 g</li>
+                <li>Salt - 10g</li>
+                <li>Flour - 1kg</li>
+                <li>Sugar -200g</li>
+                <li>Water - 1l</li>
+                <li>Cacao - 100g</li>
+                <li>Butter - 200g</li>
+                <li>Water</li>
+                <li>Braun sugar - 13g</li>
+                <li>Braun sugar</li>
+              </ol>
+            </div>
+          </div>
+          <div class="card">
+            <a class="card__image-link" href="#"
+              ><img
+                alt="bakery image"
+                class="card__image"
+                src="./assets/Images/joyful-vT5xrj3z1OE-unsplash.jpg"
+            /></a>
+
+            <div class="card__bookmark">
+              <svg
+                class="card__bookmark-icon"
+                width="37"
+                height="49"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g filter="url(#a)">
+                  <path
+                    d="M4.095 39.302V4.422A3.612 3.612 0 0 1 7.708.809h21.648a3.612 3.612 0 0 1 3.613 3.613v34.88l-14.439-8.42-14.435 8.42Z"
+                    fill="url(#b)"
+                  />
+                  <path
+                    d="M4.595 38.431V4.421A3.112 3.112 0 0 1 7.708 1.31h21.648a3.113 3.113 0 0 1 3.113 3.113v34.01l-13.687-7.983-.252-.146-.252.146-13.683 7.982Z"
+                    stroke="#24415D"
+                    stroke-opacity=".64"
+                  />
+                </g>
+                <defs>
+                  <linearGradient
+                    id="b"
+                    x1="7.243"
+                    y1="36.299"
+                    x2="8.576"
+                    y2=".831"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#EDEDF2" />
+                    <stop offset="1" stop-color="#C1C1C1" />
+                  </linearGradient>
+                  <filter
+                    id="a"
+                    x=".095"
+                    y=".809"
+                    width="36.873"
+                    height="47.492"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix
+                      in="SourceAlpha"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha"
+                    />
+                    <feOffset dy="5" />
+                    <feGaussianBlur stdDeviation="2" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"
+                    />
+                    <feBlend
+                      in2="BackgroundImageFix"
+                      result="effect1_dropShadow_124_493"
+                    />
+                    <feBlend
+                      in="SourceGraphic"
+                      in2="effect1_dropShadow_124_493"
+                      result="shape"
+                    />
+                  </filter>
+                </defs>
+              </svg>
+            </div>
+            <!-- <div class="card__description"> -->
+            <div class="card__content">
+              <a href="#" class="card__title"
+                >Naleśniki z serem i truskawkami</a
+              >
+              <div class="card__bakery-type">
+                <svg
+                  class="card__icon"
+                  width="27"
+                  height="27"
+                  viewBox="0 0 27 27"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3.06288 5.38007C3.12947 5.4465 3.22935 5.47971 3.29593 5.47971C3.36252 5.47971 3.46239 5.4465 3.52898 5.38007L3.59556 5.31365L4.12824 5.87823L3.66215 6.34317C3.12947 6.87454 3.12947 7.73801 3.66215 8.30258L18.7102 23.3137C18.9766 23.5793 19.3428 23.7122 19.6757 23.7122C20.0086 23.7122 20.3748 23.5793 20.6412 23.3137L21.1073 22.8487L21.6732 23.4133L21.6067 23.4797C21.4735 23.6125 21.4735 23.8118 21.6067 23.9447L24.1702 26.5018C24.4698 26.8007 24.9026 27 25.3354 27C25.7682 27 26.201 26.8339 26.5006 26.5018C26.8002 26.203 27 25.7712 27 25.3395C27 24.9077 26.8335 24.476 26.5006 24.1771L23.9371 21.6199C23.8039 21.4871 23.6042 21.4871 23.471 21.6199H23.4377L22.9051 21.0554L23.3711 20.5904C23.9038 20.059 23.9038 19.1956 23.3711 18.631L8.32306 3.65314C7.79038 3.12177 6.92478 3.12177 6.35882 3.65314L5.89272 4.11808L5.32676 3.58672L5.39334 3.5203C5.45993 3.45387 5.49322 3.38745 5.49322 3.28782C5.49322 3.18819 5.45993 3.12177 5.39334 3.05535L2.82984 0.498155C2.53021 0.199262 2.09741 0 1.66461 0C1.23181 0 0.799014 0.166052 0.499383 0.498155C0.199753 0.797048 0 1.22878 0 1.66052C0 2.09225 0.166461 2.52399 0.499383 2.82288L3.06288 5.38007ZM26.0345 24.5756C26.2343 24.7749 26.3342 25.0074 26.3342 25.2731C26.3342 25.5387 26.2343 25.7712 26.0345 25.9705C25.6683 26.3358 25.0025 26.3358 24.6363 25.9705L22.3058 23.6458L22.3724 23.5793L23.0049 22.9483L23.7041 22.2509L26.0345 24.5756ZM22.5388 22.4834L22.1393 22.8819L21.5734 22.3506L22.3724 21.5535L22.9051 22.0849L22.5388 22.4834ZM6.82491 4.11808C7.09125 3.8524 7.55734 3.8524 7.82367 4.11808L22.8718 19.1292C23.1381 19.3948 23.1381 19.8598 22.8718 20.1255L20.1751 22.8155C19.9088 23.0812 19.4427 23.0812 19.1763 22.8155L4.12824 7.83764C3.8619 7.57196 3.8619 7.10701 4.12824 6.84133L4.82737 6.14391L6.09248 4.88192L6.82491 4.11808ZM4.86067 4.05166L5.42663 4.58303L4.62762 5.38007L4.09494 4.84871L4.49445 4.45018L4.86067 4.05166ZM0.965475 0.99631C1.16523 0.797048 1.39827 0.697417 1.66461 0.697417C1.93095 0.697417 2.164 0.797048 2.36375 0.99631L4.6942 3.32103L3.99507 4.01845L3.36252 4.64945L3.29593 4.71587L0.965475 2.39114C0.765721 2.19188 0.665845 1.95941 0.665845 1.69373C0.665845 1.42804 0.799013 1.16236 0.965475 0.99631Z"
+                    fill="black"
+                  />
+                </svg>
+
+                <a href="#" class="card__bakery-type-title">Naleśniki</a>
+              </div>
+              <div class="card__ranking-and-button">
+                <div class="ranking">
+                  <input
+                    type="radio"
+                    class="ranking__input"
+                    name="ranking-4"
+                    id="star-1-4"
+                  /><label class="ranking__label" for="star-1-4"> </label>
+                  <input
+                    type="radio"
+                    class="ranking__input"
+                    name="ranking-4"
+                    id="star-2-4"
+                  /><label class="ranking__label" for="star-2-4"> </label>
+                  <input
+                    type="radio"
+                    class="ranking__input"
+                    name="ranking-4"
+                    id="star-3-4"
+                  /><label class="ranking__label" for="star-3-4"> </label>
+                  <input
+                    type="radio"
+                    class="ranking__input"
+                    name="ranking-4"
+                    id="star-4-4"
+                  /><label class="ranking__label" for="star-4-4"> </label>
+                  <input
+                    type="radio"
+                    class="ranking__input"
+                    name="ranking-4"
+                    id="star-5-4"
+                  /><label class="ranking__label" for="star-5-4"> </label>
+                </div>
+                <button class="card__btn btn btn--link">
+                  SHOW Ingridients
+                </button>
+              </div>
+            </div>
+            <div class="card__back-side">
+              <ol class="list list__ingridients">
+                <li>Milk - 100 g</li>
+                <li>Salt - 10g</li>
+                <li>Flour - 1kg</li>
+                <li>Sugar -200g</li>
+                <li>Water - 1l</li>
+                <li>Cacao - 100g</li>
+                <li>Butter - 200g</li>
+                <li>Water</li>
+                <li>Braun sugar - 13g</li>
+                <li>Braun sugar</li>
+              </ol>
+            </div>
+          </div>
+          <div class="card">
+            <a class="card__image-link" href="#"
+              ><img
+                alt="bakery image"
+                class="card__image"
+                src="./assets/Images/karlis-dambrans-oLHk_WLupSc-unsplash.jpg"
+            /></a>
+
+            <div class="card__bookmark">
+              <svg
+                class="card__bookmark-icon"
+                width="37"
+                height="49"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g filter="url(#a)">
+                  <path
+                    d="M4.095 39.302V4.422A3.612 3.612 0 0 1 7.708.809h21.648a3.612 3.612 0 0 1 3.613 3.613v34.88l-14.439-8.42-14.435 8.42Z"
+                    fill="url(#b)"
+                  />
+                  <path
+                    d="M4.595 38.431V4.421A3.112 3.112 0 0 1 7.708 1.31h21.648a3.113 3.113 0 0 1 3.113 3.113v34.01l-13.687-7.983-.252-.146-.252.146-13.683 7.982Z"
+                    stroke="#24415D"
+                    stroke-opacity=".64"
+                  />
+                </g>
+                <defs>
+                  <linearGradient
+                    id="b"
+                    x1="7.243"
+                    y1="36.299"
+                    x2="8.576"
+                    y2=".831"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#EDEDF2" />
+                    <stop offset="1" stop-color="#C1C1C1" />
+                  </linearGradient>
+                  <filter
+                    id="a"
+                    x=".095"
+                    y=".809"
+                    width="36.873"
+                    height="47.492"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix
+                      in="SourceAlpha"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha"
+                    />
+                    <feOffset dy="5" />
+                    <feGaussianBlur stdDeviation="2" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"
+                    />
+                    <feBlend
+                      in2="BackgroundImageFix"
+                      result="effect1_dropShadow_124_493"
+                    />
+                    <feBlend
+                      in="SourceGraphic"
+                      in2="effect1_dropShadow_124_493"
+                      result="shape"
+                    />
+                  </filter>
+                </defs>
+              </svg>
+            </div>
+            <!-- <div class="card__description"> -->
+            <div class="card__content">
+              <a href="#" class="card__title"
+                >Makaroniki z czekoladowym ganaszem</a
+              >
+              <div class="card__bakery-type">
+                <svg
+                  class="card__icon"
+                  width="27"
+                  height="27"
+                  viewBox="0 0 27 27"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3.06288 5.38007C3.12947 5.4465 3.22935 5.47971 3.29593 5.47971C3.36252 5.47971 3.46239 5.4465 3.52898 5.38007L3.59556 5.31365L4.12824 5.87823L3.66215 6.34317C3.12947 6.87454 3.12947 7.73801 3.66215 8.30258L18.7102 23.3137C18.9766 23.5793 19.3428 23.7122 19.6757 23.7122C20.0086 23.7122 20.3748 23.5793 20.6412 23.3137L21.1073 22.8487L21.6732 23.4133L21.6067 23.4797C21.4735 23.6125 21.4735 23.8118 21.6067 23.9447L24.1702 26.5018C24.4698 26.8007 24.9026 27 25.3354 27C25.7682 27 26.201 26.8339 26.5006 26.5018C26.8002 26.203 27 25.7712 27 25.3395C27 24.9077 26.8335 24.476 26.5006 24.1771L23.9371 21.6199C23.8039 21.4871 23.6042 21.4871 23.471 21.6199H23.4377L22.9051 21.0554L23.3711 20.5904C23.9038 20.059 23.9038 19.1956 23.3711 18.631L8.32306 3.65314C7.79038 3.12177 6.92478 3.12177 6.35882 3.65314L5.89272 4.11808L5.32676 3.58672L5.39334 3.5203C5.45993 3.45387 5.49322 3.38745 5.49322 3.28782C5.49322 3.18819 5.45993 3.12177 5.39334 3.05535L2.82984 0.498155C2.53021 0.199262 2.09741 0 1.66461 0C1.23181 0 0.799014 0.166052 0.499383 0.498155C0.199753 0.797048 0 1.22878 0 1.66052C0 2.09225 0.166461 2.52399 0.499383 2.82288L3.06288 5.38007ZM26.0345 24.5756C26.2343 24.7749 26.3342 25.0074 26.3342 25.2731C26.3342 25.5387 26.2343 25.7712 26.0345 25.9705C25.6683 26.3358 25.0025 26.3358 24.6363 25.9705L22.3058 23.6458L22.3724 23.5793L23.0049 22.9483L23.7041 22.2509L26.0345 24.5756ZM22.5388 22.4834L22.1393 22.8819L21.5734 22.3506L22.3724 21.5535L22.9051 22.0849L22.5388 22.4834ZM6.82491 4.11808C7.09125 3.8524 7.55734 3.8524 7.82367 4.11808L22.8718 19.1292C23.1381 19.3948 23.1381 19.8598 22.8718 20.1255L20.1751 22.8155C19.9088 23.0812 19.4427 23.0812 19.1763 22.8155L4.12824 7.83764C3.8619 7.57196 3.8619 7.10701 4.12824 6.84133L4.82737 6.14391L6.09248 4.88192L6.82491 4.11808ZM4.86067 4.05166L5.42663 4.58303L4.62762 5.38007L4.09494 4.84871L4.49445 4.45018L4.86067 4.05166ZM0.965475 0.99631C1.16523 0.797048 1.39827 0.697417 1.66461 0.697417C1.93095 0.697417 2.164 0.797048 2.36375 0.99631L4.6942 3.32103L3.99507 4.01845L3.36252 4.64945L3.29593 4.71587L0.965475 2.39114C0.765721 2.19188 0.665845 1.95941 0.665845 1.69373C0.665845 1.42804 0.799013 1.16236 0.965475 0.99631Z"
+                    fill="black"
+                  />
+                </svg>
+
+                <a href="#" class="card__bakery-type-title">Makaroniki</a>
+              </div>
+              <div class="card__ranking-and-button">
+                <div class="ranking">
+                  <input
+                    type="radio"
+                    class="ranking__input"
+                    name="ranking-5"
+                    id="star-1-5"
+                  /><label class="ranking__label" for="star-1-5"> </label>
+                  <input
+                    type="radio"
+                    class="ranking__input"
+                    name="ranking-5"
+                    id="star-2-5"
+                  /><label class="ranking__label" for="star-2-5"> </label>
+                  <input
+                    type="radio"
+                    class="ranking__input"
+                    name="ranking-5"
+                    id="star-3-5"
+                  /><label class="ranking__label" for="star-3-5"> </label>
+                  <input
+                    type="radio"
+                    class="ranking__input"
+                    name="ranking-5"
+                    id="star-4-5"
+                  /><label class="ranking__label" for="star-4-5"> </label>
+                  <input
+                    type="radio"
+                    class="ranking__input"
+                    name="ranking-5"
+                    id="star-5-5"
+                  /><label class="ranking__label" for="star-5-5"> </label>
+                </div>
+                <button class="card__btn btn btn--link">
+                  SHOW Ingridients
+                </button>
+              </div>
+            </div>
+            <div class="card__back-side">
+              <ol class="list list__ingridients">
+                <li>Milk - 100 g</li>
+                <li>Salt - 10g</li>
+                <li>Flour - 1kg</li>
+                <li>Sugar -200g</li>
+                <li>Water - 1l</li>
+                <li>Cacao - 100g</li>
+                <li>Butter - 200g</li>
+                <li>Water</li>
+                <li>Braun sugar - 13g</li>
+                <li>Braun sugar</li>
+              </ol>
+            </div>
+          </div>
+          <div class="card">
+            <a class="card__image-link" href="#"
+              ><img
+                alt="bakery image"
+                class="card__image"
+                src="./assets/Images/mink-mingle-LGNxQzYmeUk-unsplash.jpg"
+            /></a>
+
+            <div class="card__bookmark">
+              <svg
+                class="card__bookmark-icon"
+                width="37"
+                height="49"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g filter="url(#a)">
+                  <path
+                    d="M4.095 39.302V4.422A3.612 3.612 0 0 1 7.708.809h21.648a3.612 3.612 0 0 1 3.613 3.613v34.88l-14.439-8.42-14.435 8.42Z"
+                    fill="url(#b)"
+                  />
+                  <path
+                    d="M4.595 38.431V4.421A3.112 3.112 0 0 1 7.708 1.31h21.648a3.113 3.113 0 0 1 3.113 3.113v34.01l-13.687-7.983-.252-.146-.252.146-13.683 7.982Z"
+                    stroke="#24415D"
+                    stroke-opacity=".64"
+                  />
+                </g>
+                <defs>
+                  <linearGradient
+                    id="b"
+                    x1="7.243"
+                    y1="36.299"
+                    x2="8.576"
+                    y2=".831"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#EDEDF2" />
+                    <stop offset="1" stop-color="#C1C1C1" />
+                  </linearGradient>
+                  <filter
+                    id="a"
+                    x=".095"
+                    y=".809"
+                    width="36.873"
+                    height="47.492"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix
+                      in="SourceAlpha"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha"
+                    />
+                    <feOffset dy="5" />
+                    <feGaussianBlur stdDeviation="2" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"
+                    />
+                    <feBlend
+                      in2="BackgroundImageFix"
+                      result="effect1_dropShadow_124_493"
+                    />
+                    <feBlend
+                      in="SourceGraphic"
+                      in2="effect1_dropShadow_124_493"
+                      result="shape"
+                    />
+                  </filter>
+                </defs>
+              </svg>
+            </div>
+            <!-- <div class="card__description"> -->
+            <div class="card__content">
+              <a href="#" class="card__title">Sernik wiśniwowy</a>
+              <div class="card__bakery-type">
+                <svg
+                  class="card__icon"
+                  width="27"
+                  height="27"
+                  viewBox="0 0 27 27"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3.06288 5.38007C3.12947 5.4465 3.22935 5.47971 3.29593 5.47971C3.36252 5.47971 3.46239 5.4465 3.52898 5.38007L3.59556 5.31365L4.12824 5.87823L3.66215 6.34317C3.12947 6.87454 3.12947 7.73801 3.66215 8.30258L18.7102 23.3137C18.9766 23.5793 19.3428 23.7122 19.6757 23.7122C20.0086 23.7122 20.3748 23.5793 20.6412 23.3137L21.1073 22.8487L21.6732 23.4133L21.6067 23.4797C21.4735 23.6125 21.4735 23.8118 21.6067 23.9447L24.1702 26.5018C24.4698 26.8007 24.9026 27 25.3354 27C25.7682 27 26.201 26.8339 26.5006 26.5018C26.8002 26.203 27 25.7712 27 25.3395C27 24.9077 26.8335 24.476 26.5006 24.1771L23.9371 21.6199C23.8039 21.4871 23.6042 21.4871 23.471 21.6199H23.4377L22.9051 21.0554L23.3711 20.5904C23.9038 20.059 23.9038 19.1956 23.3711 18.631L8.32306 3.65314C7.79038 3.12177 6.92478 3.12177 6.35882 3.65314L5.89272 4.11808L5.32676 3.58672L5.39334 3.5203C5.45993 3.45387 5.49322 3.38745 5.49322 3.28782C5.49322 3.18819 5.45993 3.12177 5.39334 3.05535L2.82984 0.498155C2.53021 0.199262 2.09741 0 1.66461 0C1.23181 0 0.799014 0.166052 0.499383 0.498155C0.199753 0.797048 0 1.22878 0 1.66052C0 2.09225 0.166461 2.52399 0.499383 2.82288L3.06288 5.38007ZM26.0345 24.5756C26.2343 24.7749 26.3342 25.0074 26.3342 25.2731C26.3342 25.5387 26.2343 25.7712 26.0345 25.9705C25.6683 26.3358 25.0025 26.3358 24.6363 25.9705L22.3058 23.6458L22.3724 23.5793L23.0049 22.9483L23.7041 22.2509L26.0345 24.5756ZM22.5388 22.4834L22.1393 22.8819L21.5734 22.3506L22.3724 21.5535L22.9051 22.0849L22.5388 22.4834ZM6.82491 4.11808C7.09125 3.8524 7.55734 3.8524 7.82367 4.11808L22.8718 19.1292C23.1381 19.3948 23.1381 19.8598 22.8718 20.1255L20.1751 22.8155C19.9088 23.0812 19.4427 23.0812 19.1763 22.8155L4.12824 7.83764C3.8619 7.57196 3.8619 7.10701 4.12824 6.84133L4.82737 6.14391L6.09248 4.88192L6.82491 4.11808ZM4.86067 4.05166L5.42663 4.58303L4.62762 5.38007L4.09494 4.84871L4.49445 4.45018L4.86067 4.05166ZM0.965475 0.99631C1.16523 0.797048 1.39827 0.697417 1.66461 0.697417C1.93095 0.697417 2.164 0.797048 2.36375 0.99631L4.6942 3.32103L3.99507 4.01845L3.36252 4.64945L3.29593 4.71587L0.965475 2.39114C0.765721 2.19188 0.665845 1.95941 0.665845 1.69373C0.665845 1.42804 0.799013 1.16236 0.965475 0.99631Z"
+                    fill="black"
+                  />
+                </svg>
+
+                <a href="#" class="card__bakery-type-title">Serniki</a>
+              </div>
+              <div class="card__ranking-and-button">
+                <div class="ranking">
+                  <input
+                    type="radio"
+                    class="ranking__input"
+                    name="ranking-6"
+                    id="star-1-6"
+                  /><label class="ranking__label" for="star-1-6"> </label>
+                  <input
+                    type="radio"
+                    class="ranking__input"
+                    name="ranking-6"
+                    id="star-2-6"
+                  /><label class="ranking__label" for="star-2-6"> </label>
+                  <input
+                    type="radio"
+                    class="ranking__input"
+                    name="ranking-6"
+                    id="star-3-6"
+                  /><label class="ranking__label" for="star-3-6"> </label>
+                  <input
+                    type="radio"
+                    class="ranking__input"
+                    name="ranking-6"
+                    id="star-4-6"
+                  /><label class="ranking__label" for="star-4-6"> </label>
+                  <input
+                    type="radio"
+                    class="ranking__input"
+                    name="ranking-6"
+                    id="star-5-6"
+                  /><label class="ranking__label" for="star-5-6"> </label>
+                </div>
+                <button class="card__btn btn btn--link">
+                  SHOW Ingridients
+                </button>
+              </div>
+            </div>
+            <div class="card__back-side">
+              <ol class="list list__ingridients">
+                <li>Milk - 100 g</li>
+                <li>Salt - 10g</li>
+                <li>Flour - 1kg</li>
+                <li>Sugar -200g</li>
+                <li>Water - 1l</li>
+                <li>Cacao - 100g</li>
+                <li>Butter - 200g</li>
+                <li>Water</li>
+                <li>Braun sugar - 13g</li>
+                <li>Braun sugar</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
+
   <script src="./main.js"></script>
 </html>

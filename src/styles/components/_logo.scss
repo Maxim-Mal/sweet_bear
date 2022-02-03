@@ -1,0 +1,57 @@
+.logo {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-items: center;
+  margin-top: 60px;
+
+  @include respond-to(small) {
+    margin-top: 15px;
+  }
+
+  &_card {
+    @include FlexCenter;
+    grid-row: span 2;
+    height: 180px;
+    width: 180px;
+    margin-right: 20px;
+    border-radius: 30%;
+    box-shadow: $shadow-outset;
+    background: linear-gradient(310.59deg, $cPink 3.8%, $cGray35 119.99%);
+
+    @include respond-to(small) {
+      height: 100px;
+      width: 100px;
+    }
+  }
+
+  &__icon {
+    margin: 5px;
+  }
+
+  &__title {
+    margin-top: 30px;
+    font-size: 71px;
+    font-family: $courgette;
+    font-style: normal;
+    font-weight: normal;
+    color: $cPureBlack;
+
+    @include respond-to(small) {
+      font-size: 40px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 30px;
+    font-size: 48px;
+    font-family: $courgette;
+    font-style: normal;
+    font-weight: normal;
+    color: $cPink10;
+
+    @include respond-to(small) {
+      font-size: 25px;
+    }
+  }
+}
