@@ -56,25 +56,18 @@ $small-square-and-round-btn-size: 35px;
     }
   }
 
-  &__link {
+  &--link {
     padding: 0 20px 0 20px;
     height: 41px;
     width: fit-content;
     transition: all 0.3s ease;
 
-    &--pink {
-      background: $cPink5;
-
-      box-shadow: $shadow-outset;
-
-      &:active {
-        box-shadow: $shadow-intset;
-      }
-    }
-
     @include respond-to(small) {
       height: 30px;
     }
+  }
+  &--pink {
+    background: $cPink5;
   }
 
   &--round {

@@ -16,7 +16,7 @@
   }
 
   @include respond-to(huge) {
-    .btn__link {
+    .btn--link {
       display: none;
     }
   }
