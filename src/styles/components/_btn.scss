@@ -66,6 +66,9 @@ $small-square-and-round-btn-size: 35px;
       height: 30px;
     }
   }
+  &--pink {
+    background: $cPink5;
+  }
 
   &--round {
     flex-shrink: 0;

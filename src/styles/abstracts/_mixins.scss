@@ -5,15 +5,6 @@
   justify-content: center;
 }
 
-@mixin normalSquareAndRoundBtnSize {
-  height: 55px;
-  width: 55px;
-}
-@mixin smallSquareAndRoundBtnSize {
-  height: 35px;
-  width: 35px;
-}
-
 $breakpoints: (
   "small": (
     max-width: 576px,
