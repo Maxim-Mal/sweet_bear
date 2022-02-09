@@ -1,7 +1,7 @@
 (() => {
   const baseUrl = "https://res.cloudinary.com/maxim-mal/image/fetch";
 
-  Array.from(document.querySelectorAll("cloud")).forEach((image) => {
+  Array.from(document.querySelectorAll("[data-bg]")).forEach((image) => {
     const { clientWidth, clientHeight } = image;
     const pixelRatio = window.devicePixelRatio || 1.0;
     const imageParams = `w_${
