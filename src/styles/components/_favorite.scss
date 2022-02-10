@@ -51,7 +51,6 @@
   }
 
   &__text {
-    display: inline;
     background-color: rgba($color: $cGray30, $alpha: 0.8);
     font-size: 18px;
     padding: 30px;
@@ -86,14 +85,11 @@
   }
 
   &__link {
-    display: flex;
-    align-self: flex-end;
     gap: 8px;
     margin-left: auto;
     text-transform: uppercase;
     font-size: 14px;
     font-family: $avenir;
-    color: $cGray;
 
     &:hover .icon {
       transform: translate(5px);
@@ -108,11 +104,17 @@
     fill: $cGray;
   }
 
+  &__btn {
+    padding: 0 14px 0 14px;
+    height: 32px;
+  }
+
   .section__title {
     align-self: flex-start;
     font-size: 34px;
     padding: 0;
     margin-bottom: 20px;
+
     &--handwritten {
       font-size: 50px;
     }
@@ -128,10 +130,9 @@
 
 .favorite-list {
   list-style-type: none;
-  display: contents;
+  padding-left: 0;
 
   &__item {
-    display: flex;
     position: relative;
   }
 
@@ -153,6 +154,10 @@
       width: 100px;
       margin-bottom: 40px;
     }
+  }
+  &__title-wrap {
+    display: inline;
+    margin-top: 40px;
   }
 
   &__title {
@@ -195,7 +200,7 @@
     color: $cGray90;
 
     &:hover .favorite-list__image {
-      transform: box-shadow 0.3s ease;
+      transition: box-shadow 0.3s ease;
       box-shadow: inset 0px -0px 0px 5px rgba($cPink10, 1);
     }
 
@@ -207,6 +212,8 @@
   &__btn {
     align-self: flex-end;
     margin-bottom: 20px;
+    padding: 0 14px 0 14px;
+    height: 32px;
 
     @include respond-to(medium) {
       align-self: center;
