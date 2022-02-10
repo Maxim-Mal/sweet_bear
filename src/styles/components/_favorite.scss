@@ -51,6 +51,7 @@
   }
 
   &__text {
+    display: inline;
     background-color: rgba($color: $cGray30, $alpha: 0.8);
     font-size: 18px;
     padding: 30px;
@@ -155,10 +156,11 @@
   }
 
   &__title {
-    display: flex;
+    display: inline;
     transition: all 0.3s ease;
     margin-top: 50px;
     margin-left: 20px;
+    height: fit-content;
     font-family: $faustina;
     font-size: 22px;
     text-decoration: none;
