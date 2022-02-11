@@ -1,0 +1,92 @@
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1200px;
+  padding: 0 30px;
+  gap: 90px;
+  border-top: solid $cPureBlack 1px;
+
+  @include respond-to(large) {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+}
+
+.footer-conteiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+
+  &__title {
+    font-size: 20px;
+    font-family: $avenir;
+    font-weight: 900;
+    margin-bottom: 20px;
+    color: $cGray;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  &__span {
+    font-family: $roboto;
+    font-size: 14px;
+    color: rgba($color: $cGray, $alpha: 0.75);
+  }
+
+  &__icon {
+    height: 20px;
+  }
+  & .btn {
+    height: 48px;
+    width: 48px;
+  }
+}
+
+.social-items-wrap {
+  display: flex;
+  gap: 20px;
+}
+.contacts-items-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 22px;
+
+  @include respond-to(large) {
+    justify-content: flex-start;
+  }
+
+  @include respond-to(medium) {
+    flex-direction: column;
+  }
+}
+
+.footer-back-top {
+  display: flex;
+  padding: 0 14px 0 14px;
+  height: 52px;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-bottom: 50px;
+
+  &:hover .icon {
+    transform: translate(5px);
+    transition: all 0.3s ease;
+    fill: $cPurple;
+  }
+
+  &__icon {
+    align-self: center;
+    height: 14px;
+    fill: $cGray;
+    margin-left: 8px;
+  }
+}
