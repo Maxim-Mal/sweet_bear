@@ -10,6 +10,8 @@ $small-square-and-round-btn-size: 35px;
   background: $cGray30;
   box-shadow: $shadow-outset;
   text-decoration: none;
+  transition: all 0.3s ease;
+
   color: $cGray;
 
   @include respond-to(small) {
@@ -60,7 +62,6 @@ $small-square-and-round-btn-size: 35px;
     padding: 0 20px 0 20px;
     height: 41px;
     width: fit-content;
-    transition: all 0.3s ease;
 
     @include respond-to(small) {
       height: 30px;
@@ -98,4 +99,64 @@ $small-square-and-round-btn-size: 35px;
     height: 14px;
     width: 40px;
   }
+}
+
+.btn-to-top {
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  height: 60px;
+  width: 60px;
+  font-size: 14px;
+  padding: 0;
+  color: $cGray;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.5s ease;
+
+  @include respond-to(small) {
+    height: 50px;
+    width: 50px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  &__show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &:hover &__icon {
+    fill: $cPurple;
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    transform: rotate(-90deg);
+    transition: 0.3s ease;
+    fill: $cGray;
+
+    @include respond-to(small) {
+      width: 15px;
+    }
+  }
+}
+
+.btn-glass {
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
