@@ -145,7 +145,7 @@
     background-position: 50% 50%;
     border-radius: 50%;
     aspect-ratio: 1/1;
-    transform: 0.3s ease;
+    transition: box-shadow 0.3s ease;
     width: 150px;
 
     @include respond-to(large) {
@@ -200,7 +200,6 @@
     color: $cGray90;
 
     &:hover .favorite-list__image {
-      transition: box-shadow 0.3s ease;
       box-shadow: inset 0px -0px 0px 5px rgba($cPink10, 1);
     }
 

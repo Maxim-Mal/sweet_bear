@@ -30,8 +30,10 @@
       require('html-loader!./section-latest.html').default %> <%=
       require('html-loader!./section-videos.html').default %> <%=
       require('html-loader!./section-popular.html').default %> <%=
-      require('html-loader!./section-about.html').default %> <%=
-      require('html-loader!./footer.html').default %>
+      require('html-loader!./section-about.html').default %>
     </main>
+    <footer class="section footer">
+      <%= require('html-loader!./footer.html').default %>
+    </footer>
   </body>
 </html>
