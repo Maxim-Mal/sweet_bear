@@ -13,6 +13,8 @@
       />
     </svg>
   </button>
+  <!----------Navigation panel------------->
+
   <nav class="nav-panel">
     <a href="#" class="btn btn--sqr nav-panel_home-btn">
       <svg class="btn__icon">
@@ -99,69 +101,105 @@
       </svg>
     </a>
 
-    <div class="sign-up">
-      <h3 class="sign-up__title">Create new account:</h3>
-      <form id="sign-up-form" class="sign-up-form">
-        <div class="input-field sign-up-form__item">
-          <label class="sign-up-form__label" for="sign-up-username"
-            >Username</label
-          >
-          <input
-            class="sign-up-form__input input-field__input sign-up-username"
-            type="text"
-            placeholder="Unique username"
-            id="sign-up-username"
-          />
-          <svg
-            class="input-field__icon"
-            viewBox="0 0 348 348"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M174 0.399994C78.277 0.399994 0.399994 78.279 0.399994 174C0.399994 269.721 78.279 347.6 174 347.6C269.721 347.6 347.6 269.721 347.6 174C347.6 78.279 269.721 0.399994 174 0.399994ZM174 73.201C214.141 73.201 246.801 105.861 246.801 146.002C246.801 186.143 214.141 218.803 174 218.803C133.859 218.803 101.199 186.143 101.199 146.002C101.199 105.861 133.859 73.201 174 73.201ZM174 336.401C131.703 336.401 93.141 320.131 64.21 293.538C87.983 254.311 130.886 230.003 176.8 230.003C221.952 230.003 262.902 252.452 287.29 290.202C258.005 318.764 218.032 336.401 174 336.401Z"
-            />
-          </svg>
+    <!----------SIGN-UP FORM------------->
 
-          <span class="sign-up-form__error">Error maessage</span>
-        </div>
-        <div class="sign-up-form__item">
-          <label class="sign-up-form__label" for="sign-up-email">Email</label>
-          <input
-            class="sign-up-form__input input-field__input sign-up-email"
-            type="email"
-            placeholder="Enter you email "
-            id="sign-up-email"
-          />
-          <span class="sign-up-form__error">Error maessage</span>
-        </div>
-        <div class="sign-up-form__item">
-          <label class="sign-up-form__label" for="sign-up-password-1"
-            >Password</label
-          >
-          <input
-            class="sign-up-form__input input-field__input sign-up-password-1"
-            type="password"
-            placeholder="Password min. 6 char."
-            id="sign-up-password-1"
-          />
-          <span class="sign-up-form__error">Error maessage</span>
-        </div>
-        <div class="sign-up-form__item">
-          <label class="sign-up-form__label" for="sign-up-passwoed-2"
-            >Confirm password</label
-          >
-          <input
-            class="sign-up-form__input input-field__input sign-up-passwoed-2"
-            type="password"
-            placeholder="Confirm your password"
-            id="sign-up-passwoed-2"
-          />
-          <span class="sign-up-form__error">Error maessage</span>
-        </div>
-        <button class="sign-up-form__submit-btn btn btn--link">
-          Sumbit new account
-        </button>
-      </form>
+    <div class="sign-up-blur">
+      <div class="sign-up">
+        <h3 class="sign-up__title">Create new account:</h3>
+        <form id="sign-up-form" class="sign-up-form">
+          <div class="sign-up-form__item">
+            <label class="sign-up-form__label" for="sign-up-username"
+              >Username</label
+            >
+            <input
+              class="sign-up-form__input input-field__input sign-up-username"
+              type="text"
+              placeholder="Unique username"
+              id="sign-up-username"
+            />
+            <svg
+              class="input-field__icon sign-up-form__icon"
+              viewBox="0 0 348 348"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M174 0.399994C78.277 0.399994 0.399994 78.279 0.399994 174C0.399994 269.721 78.279 347.6 174 347.6C269.721 347.6 347.6 269.721 347.6 174C347.6 78.279 269.721 0.399994 174 0.399994ZM174 73.201C214.141 73.201 246.801 105.861 246.801 146.002C246.801 186.143 214.141 218.803 174 218.803C133.859 218.803 101.199 186.143 101.199 146.002C101.199 105.861 133.859 73.201 174 73.201ZM174 336.401C131.703 336.401 93.141 320.131 64.21 293.538C87.983 254.311 130.886 230.003 176.8 230.003C221.952 230.003 262.902 252.452 287.29 290.202C258.005 318.764 218.032 336.401 174 336.401Z"
+              />
+            </svg>
+
+            <span class="sign-up-form__error">Error maessage</span>
+          </div>
+          <div class="sign-up-form__item">
+            <label class="sign-up-form__label" for="sign-up-email">Email</label>
+            <input
+              class="sign-up-form__input input-field__input sign-up-email"
+              type="email"
+              placeholder="Enter your email"
+              id="sign-up-email"
+            />
+            <svg
+              class="sign-up-form__icon input-field__icon input-field__icon--letter"
+              width="40"
+              height="29"
+              viewBox="0 0 40 29"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M39.6554 0.910205L20.4101 15.1408C20.1718 15.3172 19.8451 15.3172 19.5978 15.1497L0.149944 1.2896C0.0529528 1.52791 0 1.78408 0 2.0575V26.8905C0 28.0294 0.92711 28.9562 2.0657 28.9562H37.9339C39.0728 28.9562 39.9996 28.0291 39.9996 26.8905V2.06617C40.0085 1.6422 39.8761 1.2361 39.6553 0.909692L39.6554 0.910205ZM1.06783 0.256838L19.9955 13.7371L38.4723 0.0708171C38.3045 0.0267876 38.1191 0.000308502 37.9337 0.000308502L2.07345 0C1.71167 0 1.36744 0.0883679 1.0672 0.256173L1.06783 0.256838Z"
+              />
+            </svg>
+
+            <span class="sign-up-form__error">Error maessage</span>
+          </div>
+          <div class="sign-up-form__item">
+            <label class="sign-up-form__label" for="sign-up-password-1"
+              >Password</label
+            >
+            <input
+              class="sign-up-form__input input-field__input sign-up-password"
+              type="password"
+              placeholder="Password min 6 char."
+              id="sign-up-password-1"
+            />
+            <svg
+              class="sign-up-form__icon input-field__icon input-field__icon--letter"
+              viewBox="0 0 270 337"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M247 146.6H230.199V98.998C230.199 44.963 186.234 0.998001 132.199 0.998001C78.164 0.998001 34.199 44.963 34.199 98.998V146.6H23C10.629 146.6 0.602005 156.631 0.602005 168.998V314.598C0.602005 326.969 10.633 336.996 23 336.996H247C259.371 336.996 269.398 326.965 269.398 314.598V168.998C269.398 156.627 259.371 146.6 247 146.6ZM151.801 264.2C151.801 273.477 144.281 281.001 135 281.001C125.723 281.001 118.199 273.481 118.199 264.2V219.399C118.199 210.122 125.719 202.598 135 202.598C144.277 202.598 151.801 210.118 151.801 219.399V264.2ZM67.801 146.6V98.998C67.801 63.49 96.692 34.6 132.199 34.6C167.711 34.6 196.601 63.491 196.601 98.998V146.6H67.801Z"
+              />
+            </svg>
+
+            <span class="sign-up-form__error">Error maessage</span>
+          </div>
+          <div class="sign-up-form__item">
+            <label class="sign-up-form__label" for="sign-up-password-2"
+              >Password</label
+            >
+            <input
+              class="sign-up-form__input input-field__input sign-up-password"
+              type="password"
+              placeholder="Confirm your password"
+              id="sign-up-password-2"
+            />
+            <svg
+              class="sign-up-form__icon input-field__icon input-field__icon--letter"
+              viewBox="0 0 270 337"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M247 146.6H230.199V98.998C230.199 44.963 186.234 0.998001 132.199 0.998001C78.164 0.998001 34.199 44.963 34.199 98.998V146.6H23C10.629 146.6 0.602005 156.631 0.602005 168.998V314.598C0.602005 326.969 10.633 336.996 23 336.996H247C259.371 336.996 269.398 326.965 269.398 314.598V168.998C269.398 156.627 259.371 146.6 247 146.6ZM151.801 264.2C151.801 273.477 144.281 281.001 135 281.001C125.723 281.001 118.199 273.481 118.199 264.2V219.399C118.199 210.122 125.719 202.598 135 202.598C144.277 202.598 151.801 210.118 151.801 219.399V264.2ZM67.801 146.6V98.998C67.801 63.49 96.692 34.6 132.199 34.6C167.711 34.6 196.601 63.491 196.601 98.998V146.6H67.801Z"
+              />
+            </svg>
+
+            <span class="sign-up-form__error">Error maessage</span>
+          </div>
+          <button class="sign-up-form__submit-btn btn btn--link">
+            Sumbit new account
+          </button>
+        </form>
+      </div>
     </div>
   </nav>
 </header>
