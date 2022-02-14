@@ -1,17 +1,22 @@
 .sign-up-blur__show {
+  display: flex;
+  justify-content: center;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
   width: 100vw;
   height: 100vh;
-  background-color: rgba($cGray, 0.4);
+  background-color: rgba($cGray, 0.2);
   backdrop-filter: blur(15px);
+
+  @include animation-fade-in-fwd;
 }
 .sign-up {
   display: none;
   align-items: center;
-  justify-content: space-between;
+  // justify-content: space-between;
+  flex-direction: column;
   z-index: 1001;
   position: fixed;
   padding: 25px;
@@ -22,34 +27,21 @@
   border-radius: 14px;
   background: $cGray30;
   box-shadow: $shadow-outset;
-  flex-direction: column;
   transition: 5s ease-in-out;
+
+  &__show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include animation-drop-down;
+  }
 
   &__title {
     margin-bottom: 30px;
     font-family: $faustina;
     font-size: 28px;
     color: $cGray;
-  }
-  &__show {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    animation: swing-in-top-fwd 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)
-      both;
-    @keyframes swing-in-top-fwd {
-      0% {
-        transform: rotateX(-100deg);
-        transform-origin: top;
-        opacity: 0;
-      }
-      100% {
-        transform: rotateX(0deg);
-        transform-origin: top;
-        opacity: 1;
-      }
-    }
   }
 }
 .sign-up-form {
@@ -71,6 +63,7 @@
   }
   &__error {
     visibility: hidden;
+    margin-top: 5px;
   }
 
   &__label {
@@ -88,5 +81,19 @@
   &__icon {
     margin-top: 40px;
     fill: $cGray;
+
+    &.error-show {
+      @include animation-pulse;
+    }
+    &.success-show {
+      fill: green;
+    }
   }
+}
+
+.error-show {
+  visibility: visible;
+  font-family: $roboto;
+  color: crimson;
+  fill: crimson;
 }
