@@ -1,0 +1,172 @@
+//------Why @font-face do not work with local files? Only with html link and import file in main css
+
+.group-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  padding: 0 20px;
+  width: 100%;
+  max-width: 1200px;
+
+  @include respond-to(large) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include respond-to(small) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: stretch;
+  overflow: hidden;
+  border-radius: 14px;
+  background: $cGray30;
+  box-shadow: $shadow-outset;
+
+  &__image-link {
+    display: block;
+  }
+
+  &__content {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: end;
+    padding: 20px 10px;
+  }
+
+  &__bookmark {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+
+    &--icon-clicked {
+      fill: rgba($cGreen, 0.65);
+    }
+
+    &--toggle {
+      opacity: 0;
+      transition: all 0.5s ease-in-out;
+      transform: translateX(25px);
+    }
+  }
+
+  &__image {
+    aspect-ratio: 2/1;
+    object-fit: cover;
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+    height: 200px;
+
+    &--show {
+      opacity: 0;
+      transform: rotateX(-180deg);
+      transition: all 0.5s ease-in-out;
+      pointer-events: none;
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    padding-bottom: 5px;
+    flex-grow: 1;
+    transition: all 0.3s ease-in-out;
+    font-size: 22px;
+    font-family: $roboto;
+    font-weight: 10;
+    text-decoration: none;
+    color: $cPureBlack;
+
+    &:hover {
+      transition: all 0.3s ease-in-out;
+      color: rgba($cPureBlack, 0.7);
+    }
+  }
+
+  &__bakery-type-title {
+    transition: all 0.3s ease-in-out;
+    font-family: $roboto;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 10;
+    color: $cGray;
+
+    &:hover {
+      transition: all 0.3s ease-in-out;
+      color: rgba($cGray, 0.7);
+    }
+  }
+
+  &__bakery-type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  &__ranking-and-button {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+
+    @include respond-to(small) {
+      gap: 10px;
+    }
+  }
+
+  &__btn {
+    padding: 2px 16px;
+    width: fit-content;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    font-size: 15px;
+  }
+
+  &__back-side {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    width: 100%;
+    height: 206px;
+    background-color: $cGray30;
+    border-color: $cPureBlack;
+
+    &--show {
+      opacity: 1;
+      pointer-events: 1;
+      transition: all 0.5s ease-in-out;
+      transform: rotateX(-180deg);
+    }
+  }
+
+  .list__ingridients {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: flex-start;
+    column-gap: 30%;
+    transform: rotateX(180deg);
+    padding: 33px;
+    list-style: square;
+  }
+}

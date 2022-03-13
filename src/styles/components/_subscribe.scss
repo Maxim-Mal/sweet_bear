@@ -1,0 +1,16 @@
+.section-subscribe {
+  @include FlexCenter;
+
+  margin: 0 auto;
+  margin-top: 50px;
+  max-width: 600px;
+  width: 70%;
+
+  &__btn {
+    margin-left: 20px;
+  }
+
+  @include respond-to(small) {
+    margin-top: 20px;
+  }
+}

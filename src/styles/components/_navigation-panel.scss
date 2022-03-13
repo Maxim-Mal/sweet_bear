@@ -3,6 +3,25 @@
 
 .nav-panel {
   display: flex;
+  align-content: center;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 25px 0px 25px;
+
+  &__search {
+    max-width: 500px;
+  }
+
+  @include respond-to(huge) {
+    .btn--link {
+      display: none;
+    }
+  }
+
+  @include respond-to(small) {
+    gap: 13px;
+  }
 }

@@ -1,12 +1,28 @@
-@import "./components/variables";
+@import "./utils/fonts";
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
 @import "./components/navigation-panel";
-@import "./logo";
+@import "./components/sign-up";
+@import "./components/logo";
+@import "./components/subscribe";
+@import "./components/sections";
+@import "./components/card";
+@import "./components/ranking";
+@import "./components/videos";
+@import "./components/about";
+@import "./components/footer";
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+}
 
 body {
-  background-color: #e0e0e0;
-  margin: 30px;
+  background-color: $cGray30;
 }
-.subscribe {
-  @include FlexCenter;
-  margin-top: 50px;
+
+.cloud {
+  width: 80vw;
 }

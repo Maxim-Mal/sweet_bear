@@ -1,0 +1,68 @@
+.section-logo {
+  @include FlexCenter;
+}
+
+.section-latest {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section-popular {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section__btn {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  width: 80%;
+  max-width: 1200px;
+  padding: 30px 0;
+}
+
+.section__btn .btn {
+  min-width: 140px;
+  text-transform: uppercase;
+}
+
+.section__title {
+  @include FlexCenter;
+  padding: 25px 0;
+  font-size: 50px;
+  font-family: $faustina;
+
+  &--handwritten {
+    padding-left: 10px;
+    font-size: 62px;
+    font-family: $baginda-script;
+    font-style: normal;
+    font-weight: 100;
+  }
+}
+.section-videos {
+  background-color: $cPink5;
+  margin: 50px 0px;
+}
+.section-about {
+  margin-top: 100px;
+  padding: 25px;
+
+  @include respond-to(small) {
+    margin-top: 50px;
+  }
+  @include respond-to(medium) {
+    margin-top: 50px;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}

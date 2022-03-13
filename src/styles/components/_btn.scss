@@ -1,104 +1,161 @@
-@import "./variables";
+//Btn sizes
+$normal-square-and-round-btn-size: 55px;
+$small-square-and-round-btn-size: 35px;
 
 .btn {
   @include FlexCenter;
   border-radius: 14px;
-  color: $btn-text-color;
-  font-family: ROBOTO;
+  font-family: $roboto;
   font-size: 18px;
-  background: $btn-color;
+  border: none;
+  background: $cGray30;
   box-shadow: $shadow-outset;
   text-decoration: none;
+  transition: all 0.3s ease;
+
+  color: $cGray;
+
+  @include respond-to(small) {
+    font-size: 15px;
+  }
 
   &:active {
     box-shadow: $shadow-intset;
   }
 
   &:hover {
-    fill: $color-inside-component;
-    color: $color-inside-component;
+    fill: $cPurple;
+    color: $cPurple;
   }
 
-  &:hover &--icon {
-    fill: $color-inside-component;
+  &:hover &__icon {
+    fill: $cPurple;
   }
 
-  &:hover &--icon-arrow{
+  &:hover &__icon-arrow {
     transform: translate(15px);
   }
 
-  &--icon {
+  &__icon {
     height: 20px;
     width: 24px;
-    fill: #575f6b;
     transition: all 0.3s ease;
+    fill: $cGray;
+
+    @include respond-to(small) {
+      height: 16px;
+    }
   }
 
   &--sqr {
-    height: 55px;
-    width: 55px;
+    height: $normal-square-and-round-btn-size;
+    width: $normal-square-and-round-btn-size;
+    flex-shrink: 0;
+
+    @include respond-to(small) {
+      height: $small-square-and-round-btn-size;
+      width: $small-square-and-round-btn-size;
+      border-radius: 50%;
+    }
   }
 
   &--link {
+    padding: 0 20px 0 20px;
     height: 41px;
-    width: 155px;
-    transition: all 0.3s ease;
+    width: fit-content;
+
+    @include respond-to(small) {
+      height: 30px;
+    }
   }
+  &--pink {
+    background: $cPink5;
+  }
+
   &--round {
-    height: 55px;
-    width: 55px;
+    flex-shrink: 0;
+    height: $normal-square-and-round-btn-size;
+    width: $normal-square-and-round-btn-size;
     border-radius: 50%;
+
+    @include respond-to(small) {
+      height: $small-square-and-round-btn-size;
+      width: $small-square-and-round-btn-size;
+    }
   }
 
   &--lang {
     transition: all 0.3s ease;
   }
 
-  &--icon-arrow{
+  &--subscribe {
+    margin-left: 20px;
+  }
+
+  &--sign-in {
+    flex-shrink: 0;
+  }
+
+  &__icon-arrow {
     height: 14px;
-    width: 14px;
-    padding: 5px;
+    width: 40px;
   }
 }
 
-//rect. button
+.btn-to-top {
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  height: 60px;
+  width: 60px;
+  font-size: 14px;
+  padding: 0;
+  color: $cGray;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.5s ease;
 
-// .btn-link {
-//   @include FlexCenter;
-//   height: 41px;
-//   width: 155px;
-//   color: $btn-text-color;
-//   text-decoration: none;
-//   font-family: ROBOTO;
-//   font-size: 18px;
-//   border-radius: 14px;
-//   background: $btn-color;
-//   box-shadow: $shadow-outset;
-//   transition: all 0.3s ease;
+  @include respond-to(small) {
+    height: 50px;
+    width: 50px;
+    bottom: 15px;
+    right: 15px;
+  }
 
-//   &:active {
-//     box-shadow: $shadow-intset;
-//   }
-//   &:hover {
-//     color: $color-inside-component;
-//   }
-//   &:hover .btn-link_icon-arrow {
-//     fill: $color-inside-component;
-//     transform: translate(5px);
-//   }
-//   &--sign-in {
-//     display: flex;
-//     justify-content: center;
-//   }
-//   &_icon-arrow {
-//     width: 14px;
-//     height: 14px;
-//     margin-left: 10px;
-//     fill: #575f6b;
-//     transition: all 0.3s ease;
-//   }
-//   &--subscribe {
-//     margin-left: 20px;
-//   }
-// }
-// round btns
+  &__show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &:hover &__icon {
+    fill: $cPurple;
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    transform: rotate(-90deg);
+    transition: 0.3s ease;
+    fill: $cGray;
+
+    @include respond-to(small) {
+      width: 15px;
+    }
+  }
+}
+
+.btn-glass {
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}

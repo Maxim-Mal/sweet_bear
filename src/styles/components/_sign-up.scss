@@ -1,0 +1,99 @@
+.sign-up-blur__show {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($cGray, 0.2);
+  backdrop-filter: blur(15px);
+
+  @include animation-fade-in-fwd;
+}
+.sign-up {
+  display: none;
+  align-items: center;
+  // justify-content: space-between;
+  flex-direction: column;
+  z-index: 1001;
+  position: fixed;
+  padding: 25px;
+  top: 25px;
+  margin-top: 100px;
+  width: 500px;
+  overflow: hidden;
+  border-radius: 14px;
+  background: $cGray30;
+  box-shadow: $shadow-outset;
+  transition: 5s ease-in-out;
+
+  &__show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include animation-drop-down;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    font-family: $faustina;
+    font-size: 28px;
+    color: $cGray;
+  }
+}
+.sign-up-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 500px;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__submit-btn {
+    display: flex;
+    align-self: center;
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+  &__error {
+    visibility: hidden;
+    margin-top: 5px;
+  }
+
+  &__label {
+    font-family: $roboto;
+    font-size: 18px;
+    color: $cGray;
+  }
+
+  &__input {
+    width: 300px;
+    margin-top: 10px;
+    flex-grow: 0;
+  }
+
+  &__icon {
+    margin-top: 40px;
+    fill: $cGray;
+
+    &.error-show {
+      @include animation-pulse;
+    }
+    &.success-show {
+      fill: green;
+    }
+  }
+}
+
+.error-show {
+  visibility: visible;
+  font-family: $roboto;
+  color: crimson;
+  fill: crimson;
+}
