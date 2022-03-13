@@ -7,4 +7,4 @@ Evolving this project as real bakery blog for my fiancee .
 `nmp run start`
 
 ## Notice:
-Please view this project in Chrome brawser, due to minnor bugs in other browsers. 
+Please view this project in Chrome browser, due to minnor bugs in other browsers. 
